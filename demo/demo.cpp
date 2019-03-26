@@ -12,7 +12,7 @@ extern "C"
 }
 // ROS includes
 #include <ros.h>
-#include <std_msgs/Float32.h>
+#include <std_msgs/Int32.h>
 #include "rosserial_tivac_tutorials/Buttons.h"
 #include "rosserial_tivac_tutorials/Panel.h"
 
