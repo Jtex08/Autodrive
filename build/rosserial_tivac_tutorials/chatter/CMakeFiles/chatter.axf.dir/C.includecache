@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c
+stdint.h
+-
+inc/hw_nvic.h
+/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/inc/hw_nvic.h
+inc/hw_types.h
+/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/inc/hw_types.h
+
+/home/ubuntu/tivaware/driverlib/debug.h
+
+/home/ubuntu/tivaware/driverlib/interrupt.h
+
+/home/ubuntu/tivaware/inc/hw_nvic.h
+
+/home/ubuntu/tivaware/inc/hw_types.h
+
+/home/ubuntu/tivaware/utils/ringbuf.c
+stdbool.h
+-
+stdint.h
+-
+inc/hw_types.h
+/home/ubuntu/tivaware/utils/inc/hw_types.h
+driverlib/debug.h
+/home/ubuntu/tivaware/utils/driverlib/debug.h
+driverlib/interrupt.h
+/home/ubuntu/tivaware/utils/driverlib/interrupt.h
+utils/ringbuf.h
+/home/ubuntu/tivaware/utils/utils/ringbuf.h
+
+/home/ubuntu/tivaware/utils/ringbuf.h
+

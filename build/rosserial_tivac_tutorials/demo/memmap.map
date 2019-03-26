@@ -1,0 +1,1190 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+                              CMakeFiles/demo.axf.dir/demo.cpp.obj (ADCIntStatus)
+/home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                              CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj (IntMasterEnable)
+/home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                              CMakeFiles/demo.axf.dir/demo.cpp.obj (SysCtlPeripheralReady)
+/home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+                              CMakeFiles/demo.axf.dir/demo.cpp.obj (SysTickIntRegister)
+/home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+                              CMakeFiles/demo.axf.dir/demo.cpp.obj (UARTIntRegister)
+/home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+                              /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o) (CPUcpsid)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+                              CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj (__aeabi_i2d)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+                              CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj (__aeabi_dmul)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixdfsi.o)
+                              CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj (__aeabi_d2iz)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+                              CMakeFiles/demo.axf.dir/demo.cpp.obj (memcpy)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-realloc.o)
+                              CMakeFiles/demo.axf.dir/demo.cpp.obj (realloc)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reallocr.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-realloc.o) (_realloc_r)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-strlen.o)
+                              CMakeFiles/demo.axf.dir/demo.cpp.obj (strlen)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-freer.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reallocr.o) (_free_r)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-realloc.o) (_impure_ptr)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reallocr.o) (_malloc_r)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memmove.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reallocr.o) (memmove)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mlock.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reallocr.o) (__malloc_lock)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-sbrkr.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-freer.o) (_sbrk_r)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mlock.o) (__retarget_lock_acquire_recursive)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reent.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-sbrkr.o) (errno)
+/usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-sbrkr.o) (_sbrk)
+
+Allocating common symbols
+Common symbol       size              file
+
+__lock___atexit_recursive_mutex
+                    0x1               /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___arc4random_mutex
+                    0x1               /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+errno               0x4               /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reent.o)
+__lock___env_recursive_mutex
+                    0x1               /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___sinit_recursive_mutex
+                    0x1               /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___malloc_recursive_mutex
+                    0x1               /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___at_quick_exit_mutex
+                    0x1               /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___dd_hash_mutex
+                    0x1               /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___tz_mutex   0x1               /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+__lock___sfp_recursive_mutex
+                    0x1               /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+
+Discarded input sections
+
+ .group         0x0000000000000000        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .group         0x0000000000000000        0xc CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+ .bss.__dso_handle
+                0x0000000000000000        0x4 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text.RingBufFull
+                0x0000000000000000       0x1a CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text.RingBufFlush
+                0x0000000000000000       0x18 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text.RingBufUsed
+                0x0000000000000000       0x12 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text.RingBufFree
+                0x0000000000000000        0xe CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text.RingBufContigUsed
+                0x0000000000000000       0x10 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text.RingBufContigFree
+                0x0000000000000000       0x1a CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text.RingBufSize
+                0x0000000000000000        0x4 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text.RingBufRead
+                0x0000000000000000       0x1a CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text.RingBufAdvanceRead
+                0x0000000000000000       0x1c CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text.RingBufAdvanceWrite
+                0x0000000000000000       0x46 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj
+ .text._ZN3ros22normalizeSecNSecSignedERlS0_
+                0x0000000000000000       0x28 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj
+ .text._ZN3ros8DurationpLERKS0_
+                0x0000000000000000       0x1c CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj
+ .text._ZN3ros8DurationmIERKS0_
+                0x0000000000000000       0x1c CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj
+ .text._ZN3ros8DurationmLEd
+                0x0000000000000000       0x3c CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj
+ .comment       0x0000000000000000       0x80 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj
+ .ARM.attributes
+                0x0000000000000000       0x39 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/time.cpp.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/time.cpp.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/time.cpp.obj
+ .text._ZN3ros4Time8fromNSecEl
+                0x0000000000000000       0x20 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/time.cpp.obj
+ .text._ZN3ros4TimepLERKNS_8DurationE
+                0x0000000000000000       0x1c CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/time.cpp.obj
+ .text._ZN3ros4TimemIERKNS_8DurationE
+                0x0000000000000000       0x1c CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/time.cpp.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/tivac_hardware.cpp.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/tivac_hardware.cpp.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/tivac_hardware.cpp.obj
+ .text          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .data          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .bss           0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text._ADCIntNumberGet
+                0x0000000000000000       0x54 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCIntRegister
+                0x0000000000000000       0x1a /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCIntUnregister
+                0x0000000000000000       0x16 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCIntDisable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCIntEnable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCIntClear
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCSequenceDisable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCSequenceOverflow
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCSequenceOverflowClear
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCSequenceUnderflow
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCSequenceUnderflowClear
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCSoftwareOversampleConfigure
+                0x0000000000000000       0x28 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCSoftwareOversampleStepConfigure
+                0x0000000000000000       0x90 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCSoftwareOversampleDataGet
+                0x0000000000000000       0x48 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCHardwareOversampleConfigure
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCComparatorConfigure
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCComparatorRegionSet
+                0x0000000000000000        0xe /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCComparatorReset
+                0x0000000000000000       0x1c /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCComparatorIntDisable
+                0x0000000000000000       0x12 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCComparatorIntEnable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCComparatorIntStatus
+                0x0000000000000000        0x4 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCComparatorIntClear
+                0x0000000000000000        0x4 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCIntDisableEx
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCIntEnableEx
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCIntStatusEx
+                0x0000000000000000       0x12 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCIntClearEx
+                0x0000000000000000        0x4 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCReferenceSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCReferenceGet
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCPhaseDelaySet
+                0x0000000000000000        0x4 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCPhaseDelayGet
+                0x0000000000000000        0x4 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCSequenceDMAEnable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCSequenceDMADisable
+                0x0000000000000000       0x12 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCBusy  0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCClockConfigSet
+                0x0000000000000000       0x18 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text.ADCClockConfigGet
+                0x0000000000000000       0x20 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .bss.g_pui8OversampleFactor
+                0x0000000000000000        0x6 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .text          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .data          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .bss           0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text._IntDefaultHandler
+                0x0000000000000000        0x2 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntUnregister
+                0x0000000000000000       0x14 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntPriorityGroupingSet
+                0x0000000000000000       0x1c /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntPriorityGroupingGet
+                0x0000000000000000       0x24 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntPrioritySet
+                0x0000000000000000       0x28 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntPriorityGet
+                0x0000000000000000       0x1c /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntDisable
+                0x0000000000000000       0x60 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntIsEnabled
+                0x0000000000000000       0x64 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntPendSet
+                0x0000000000000000       0x50 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntPendClear
+                0x0000000000000000       0x40 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntPriorityMaskSet
+                0x0000000000000000        0x4 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntPriorityMaskGet
+                0x0000000000000000        0x4 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text.IntTrigger
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pui32Dii16Regs
+                0x0000000000000000       0x14 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pui32PendRegs
+                0x0000000000000000       0x14 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pui32Priority
+                0x0000000000000000       0x20 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pui32Regs
+                0x0000000000000000       0x9c /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_pui32UnpendRegs
+                0x0000000000000000       0x14 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .text          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .data          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .bss           0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text._SysCtlMemTimingGet
+                0x0000000000000000       0x64 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlSRAMSizeGet
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlFlashSizeGet
+                0x0000000000000000       0x44 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlFlashSectorSizeGet
+                0x0000000000000000       0x38 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPeripheralPresent
+                0x0000000000000000       0x24 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPeripheralPowerOn
+                0x0000000000000000       0x20 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPeripheralPowerOff
+                0x0000000000000000       0x20 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPeripheralReset
+                0x0000000000000000       0x38 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPeripheralDisable
+                0x0000000000000000       0x20 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPeripheralSleepEnable
+                0x0000000000000000       0x20 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPeripheralSleepDisable
+                0x0000000000000000       0x20 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPeripheralDeepSleepEnable
+                0x0000000000000000       0x20 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPeripheralDeepSleepDisable
+                0x0000000000000000       0x20 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPeripheralClockGating
+                0x0000000000000000       0x48 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlIntRegister
+                0x0000000000000000       0x14 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlIntUnregister
+                0x0000000000000000       0x12 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlIntEnable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlIntDisable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlIntClear
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlIntStatus
+                0x0000000000000000       0x14 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlLDOSleepSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlLDOSleepGet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlLDODeepSleepSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlLDODeepSleepGet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlSleepPowerSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlDeepSleepPowerSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlReset
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlSleep
+                0x0000000000000000        0x4 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlDeepSleep
+                0x0000000000000000       0x20 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlResetCauseGet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlResetCauseClear
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlDelay
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlMOSCConfigSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPIOSCCalibrate
+                0x0000000000000000       0x48 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlResetBehaviorSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlResetBehaviorGet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlClockFreqSet
+                0x0000000000000000      0x228 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlClockSet
+                0x0000000000000000      0x110 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlClockGet
+                0x0000000000000000      0x150 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlDeepSleepClockSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlDeepSleepClockConfigSet
+                0x0000000000000000       0x60 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPWMClockSet
+                0x0000000000000000       0x14 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlPWMClockGet
+                0x0000000000000000       0x18 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlGPIOAHBEnable
+                0x0000000000000000       0x18 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlGPIOAHBDisable
+                0x0000000000000000       0x1c /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlUSBPLLEnable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlUSBPLLDisable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlVoltageEventConfig
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlVoltageEventStatus
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlVoltageEventClear
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlVCOGet
+                0x0000000000000000       0x70 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlNMIStatus
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlNMIClear
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlClockOutConfig
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text.SysCtlAltClkConfig
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_pppui32XTALtoVCO
+                0x0000000000000000      0x1b0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_pui32VCOFrequencies
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_pui32Xtals
+                0x0000000000000000       0x6c /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .rodata.g_sXTALtoMEMTIM
+                0x0000000000000000       0x30 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .text          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .data          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .bss           0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .text.SysTickEnable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .text.SysTickDisable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .text.SysTickIntUnregister
+                0x0000000000000000       0x14 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .text.SysTickIntEnable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .text.SysTickIntDisable
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .text.SysTickPeriodSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .text.SysTickPeriodGet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .text.SysTickValueGet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .text          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .data          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .bss           0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTParityModeSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTParityModeGet
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTFIFOLevelSet
+                0x0000000000000000        0x6 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTFIFOLevelGet
+                0x0000000000000000       0x10 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTConfigGetExpClk
+                0x0000000000000000       0x26 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTEnable
+                0x0000000000000000       0x16 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTDisable
+                0x0000000000000000       0x1c /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTConfigSetExpClk
+                0x0000000000000000       0x4a /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTFIFOEnable
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTFIFODisable
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTEnableSIR
+                0x0000000000000000       0x12 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTDisableSIR
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTSmartCardEnable
+                0x0000000000000000       0x16 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTSmartCardDisable
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTModemControlSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTModemControlClear
+                0x0000000000000000        0xe /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTModemControlGet
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTModemStatusGet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTFlowControlSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTFlowControlGet
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTTxIntModeSet
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTTxIntModeGet
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTCharsAvail
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTSpaceAvail
+                0x0000000000000000        0xc /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTCharGetNonBlocking
+                0x0000000000000000        0xe /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTCharGet
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTCharPutNonBlocking
+                0x0000000000000000        0xe /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTCharPut
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTBreakCtl
+                0x0000000000000000       0x12 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTBusy
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTIntUnregister
+                0x0000000000000000       0x16 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTIntEnable
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTIntDisable
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTIntStatus
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTIntClear
+                0x0000000000000000        0x4 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTDMAEnable
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTDMADisable
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTRxErrorGet
+                0x0000000000000000        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTRxErrorClear
+                0x0000000000000000        0x6 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTClockSourceSet
+                0x0000000000000000        0x6 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTClockSourceGet
+                0x0000000000000000        0x6 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UART9BitEnable
+                0x0000000000000000        0xe /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UART9BitDisable
+                0x0000000000000000        0xe /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UART9BitAddrSet
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UART9BitAddrSend
+                0x0000000000000000       0x2c /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTLoopbackEnable
+                0x0000000000000000        0xa /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .data          0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .bss           0x0000000000000000        0x0 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .text.CPUprimask
+                0x0000000000000000        0x6 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .text.CPUwfi   0x0000000000000000        0x4 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .text.CPUbasepriSet
+                0x0000000000000000        0x6 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .text.CPUbasepriGet
+                0x0000000000000000        0x6 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .text          0x0000000000000000      0x378 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x0000000000000000       0xac /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x0000000000000000       0x22 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_addsubdf3.o)
+ .text          0x0000000000000000      0x424 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x0000000000000000       0x50 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x0000000000000000       0x22 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_muldivdf3.o)
+ .text          0x0000000000000000       0x50 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixdfsi.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixdfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x0000000000000000       0x24 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x0000000000000000       0x22 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_arm_fixdfsi.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-realloc.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-realloc.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-realloc.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reallocr.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reallocr.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reallocr.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-strlen.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-freer.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-freer.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-freer.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memmove.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memmove.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memmove.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mlock.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mlock.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mlock.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-sbrkr.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init_recursive
+                0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close
+                0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_release
+                0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x0000000000000000       0x28 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x0000000000000000       0x88 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reent.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000000 0x0000000000040000 xr
+SRAM             0x0000000020000000 0x0000000000008000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD CMakeFiles/demo.axf.dir/demo.cpp.obj
+LOAD CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+LOAD CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+LOAD CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/duration.cpp.obj
+LOAD CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/time.cpp.obj
+LOAD CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/tivac_hardware.cpp.obj
+LOAD /home/ubuntu/tivaware/driverlib/gcc/libdriver.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libstdc++.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libm.a
+START GROUP
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libm.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a
+END GROUP
+
+.text           0x0000000000000000     0x2680
+                0x0000000000000000                . = ALIGN (0x4)
+                0x0000000000000000                _text = .
+ *(.isr_vector)
+ .isr_vector    0x0000000000000000      0x26c CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+                0x0000000000000000                g_pfnVectors
+ *(.text .text* .gnu.linkonce.t.*)
+ .text._ZNK8std_msgs4Time9serializeEPh
+                0x000000000000026c       0x28 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x000000000000026c                std_msgs::Time::serialize(unsigned char*) const
+ .text._ZN8std_msgs4Time11deserializeEPh
+                0x0000000000000294       0x3c CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000294                std_msgs::Time::deserialize(unsigned char*)
+ .text._ZN8std_msgs4Time7getTypeEv
+                0x00000000000002d0        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000002d0                std_msgs::Time::getType()
+ .text._ZN8std_msgs4Time6getMD5Ev
+                0x00000000000002d8        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000002d8                std_msgs::Time::getMD5()
+ .text._ZN14rosserial_msgs9TopicInfo7getTypeEv
+                0x00000000000002e0        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000002e0                rosserial_msgs::TopicInfo::getType()
+ .text._ZN14rosserial_msgs9TopicInfo6getMD5Ev
+                0x00000000000002e8        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000002e8                rosserial_msgs::TopicInfo::getMD5()
+ .text._ZN14rosserial_msgs3Log7getTypeEv
+                0x00000000000002f0        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000002f0                rosserial_msgs::Log::getType()
+ .text._ZN14rosserial_msgs3Log6getMD5Ev
+                0x00000000000002f8        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000002f8                rosserial_msgs::Log::getMD5()
+ .text._ZN14rosserial_msgs20RequestParamResponse7getTypeEv
+                0x0000000000000300        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000300                rosserial_msgs::RequestParamResponse::getType()
+ .text._ZN14rosserial_msgs20RequestParamResponse6getMD5Ev
+                0x0000000000000308        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000308                rosserial_msgs::RequestParamResponse::getMD5()
+ .text._ZN13TivaCHardware17SystickIntHandlerEv
+                0x0000000000000310       0x48 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000310                TivaCHardware::SystickIntHandler()
+ .text._ZNK8std_msgs7Float329serializeEPh
+                0x0000000000000358       0x14 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000358                std_msgs::Float32::serialize(unsigned char*) const
+ .text._ZN8std_msgs7Float3211deserializeEPh
+                0x000000000000036c        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x000000000000036c                std_msgs::Float32::deserialize(unsigned char*)
+ .text._ZN8std_msgs7Float327getTypeEv
+                0x0000000000000374        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000374                std_msgs::Float32::getType()
+ .text._ZN8std_msgs7Float326getMD5Ev
+                0x000000000000037c        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x000000000000037c                std_msgs::Float32::getMD5()
+ .text._ZNK8std_msgs4Bool9serializeEPh
+                0x0000000000000384        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000384                std_msgs::Bool::serialize(unsigned char*) const
+ .text._ZN8std_msgs4Bool11deserializeEPh
+                0x000000000000038c        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x000000000000038c                std_msgs::Bool::deserialize(unsigned char*)
+ .text._ZN8std_msgs4Bool7getTypeEv
+                0x0000000000000394        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000394                std_msgs::Bool::getType()
+ .text._ZN8std_msgs4Bool6getMD5Ev
+                0x000000000000039c        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x000000000000039c                std_msgs::Bool::getMD5()
+ .text._ZN8std_msgs6String7getTypeEv
+                0x00000000000003a4        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000003a4                std_msgs::String::getType()
+ .text._ZN8std_msgs6String6getMD5Ev
+                0x00000000000003ac        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000003ac                std_msgs::String::getMD5()
+ .text._ZN25rosserial_tivac_tutorials5Panel7getTypeEv
+                0x00000000000003b4        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000003b4                rosserial_tivac_tutorials::Panel::getType()
+ .text._ZN25rosserial_tivac_tutorials5Panel6getMD5Ev
+                0x00000000000003bc        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000003bc                rosserial_tivac_tutorials::Panel::getMD5()
+ .text._ZN3ros11NodeHandle_I13TivaCHardwareLi25ELi25ELi512ELi512EE9connectedEv
+                0x00000000000003c4        0x6 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000003c4                ros::NodeHandle_<TivaCHardware, 25, 25, 512, 512>::connected()
+ *fill*         0x00000000000003ca        0x2 
+ .text._ZN13TivaCHardware14UARTIntHandlerEv
+                0x00000000000003cc       0x84 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000003cc                TivaCHardware::UARTIntHandler()
+ .text._ZN3ros11NodeHandle_I13TivaCHardwareLi25ELi25ELi512ELi512EE7publishEiPKNS_3MsgE
+                0x0000000000000450       0xdc CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000450                ros::NodeHandle_<TivaCHardware, 25, 25, 512, 512>::publish(int, ros::Msg const*)
+ .text._ZN13TivaCHardware5delayEm.isra.4.constprop.6
+                0x000000000000052c       0x28 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .text._ZN3ros9Publisher7publishEPKNS_3MsgE
+                0x0000000000000554       0x16 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000554                ros::Publisher::publish(ros::Msg const*)
+ *fill*         0x000000000000056a        0x2 
+ .text._ZN13TivaCHardware4initEv
+                0x000000000000056c      0x130 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x000000000000056c                TivaCHardware::init()
+ .text._ZN3ros3Msg8varToArrIPhmEEvT_T0_
+                0x000000000000069c       0x10 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x000000000000069c                void ros::Msg::varToArr<unsigned char*, unsigned long>(unsigned char*, unsigned long)
+ .text._ZNK8std_msgs6String9serializeEPh
+                0x00000000000006ac       0x24 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000006ac                std_msgs::String::serialize(unsigned char*) const
+ .text._ZNK25rosserial_tivac_tutorials5Panel9serializeEPh
+                0x00000000000006d0       0x26 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000006d0                rosserial_tivac_tutorials::Panel::serialize(unsigned char*) const
+ .text._ZNK14rosserial_msgs20RequestParamResponse9serializeEPh
+                0x00000000000006f6      0x102 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000006f6                rosserial_msgs::RequestParamResponse::serialize(unsigned char*) const
+ .text._ZNK14rosserial_msgs3Log9serializeEPh
+                0x00000000000007f8       0x2c CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000007f8                rosserial_msgs::Log::serialize(unsigned char*) const
+ .text._ZNK14rosserial_msgs9TopicInfo9serializeEPh
+                0x0000000000000824       0x86 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000824                rosserial_msgs::TopicInfo::serialize(unsigned char*) const
+ .text._ZN3ros3Msg8arrToVarImPhEEvRT_T0_
+                0x00000000000008aa       0x1e CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000008aa                void ros::Msg::arrToVar<unsigned long, unsigned char*>(unsigned long&, unsigned char*)
+ .text._ZN14rosserial_msgs3Log11deserializeEPh
+                0x00000000000008c8       0x36 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000008c8                rosserial_msgs::Log::deserialize(unsigned char*)
+ .text._ZN14rosserial_msgs9TopicInfo11deserializeEPh
+                0x00000000000008fe       0xb6 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000008fe                rosserial_msgs::TopicInfo::deserialize(unsigned char*)
+ .text._ZN14rosserial_msgs20RequestParamResponse11deserializeEPh
+                0x00000000000009b4       0xf4 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000009b4                rosserial_msgs::RequestParamResponse::deserialize(unsigned char*)
+ .text._ZN8std_msgs6String11deserializeEPh
+                0x0000000000000aa8       0x30 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000aa8                std_msgs::String::deserialize(unsigned char*)
+ .text._ZN25rosserial_tivac_tutorials5Panel11deserializeEPh
+                0x0000000000000ad8       0x26 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000ad8                rosserial_tivac_tutorials::Panel::deserialize(unsigned char*)
+ *fill*         0x0000000000000afe        0x2 
+ .text._ZN3ros11NodeHandle_I13TivaCHardwareLi25ELi25ELi512ELi512EE15requestSyncTimeEv
+                0x0000000000000b00       0x2c CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000b00                ros::NodeHandle_<TivaCHardware, 25, 25, 512, 512>::requestSyncTime()
+ .text._ZN3ros11NodeHandle_I13TivaCHardwareLi25ELi25ELi512ELi512EE15negotiateTopicsEv
+                0x0000000000000b2c       0xc4 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000b2c                ros::NodeHandle_<TivaCHardware, 25, 25, 512, 512>::negotiateTopics()
+ .text._ZN3ros11NodeHandle_I13TivaCHardwareLi25ELi25ELi512ELi512EE8spinOnceEv
+                0x0000000000000bf0      0x278 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000bf0                ros::NodeHandle_<TivaCHardware, 25, 25, 512, 512>::spinOnce()
+ .text.startup.main
+                0x0000000000000e68      0x134 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000000e68                main
+ .text.startup._GLOBAL__sub_I_nh
+                0x0000000000000f9c       0xf0 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .text.NmiSR    0x000000000000108c        0x2 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+ .text.FaultISR
+                0x000000000000108e        0x2 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+ .text.IntDefaultHandler
+                0x0000000000001090        0x2 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+ *fill*         0x0000000000001092        0x2 
+ .text.ResetISR
+                0x0000000000001094       0x94 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+                0x0000000000001094                ResetISR
+ .text.UpdateIndexAtomic
+                0x0000000000001128       0x2a CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .text.RingBufEmpty
+                0x0000000000001152        0xc CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+                0x0000000000001152                RingBufEmpty
+ .text.RingBufReadOne
+                0x000000000000115e       0x16 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+                0x000000000000115e                RingBufReadOne
+ .text.RingBufWriteOne
+                0x0000000000001174       0x12 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+                0x0000000000001174                RingBufWriteOne
+ .text.RingBufWrite
+                0x0000000000001186       0x1a CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+                0x0000000000001186                RingBufWrite
+ .text.RingBufInit
+                0x00000000000011a0        0xc CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+                0x00000000000011a0                RingBufInit
+ .text._ZN3ros16normalizeSecNSecERmS0_
+                0x00000000000011ac       0x1c CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/time.cpp.obj
+                0x00000000000011ac                ros::normalizeSecNSec(unsigned long&, unsigned long&)
+ .text.ADCIntStatus
+                0x00000000000011c8       0x2e /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x00000000000011c8                ADCIntStatus
+ .text.ADCSequenceEnable
+                0x00000000000011f6        0xe /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x00000000000011f6                ADCSequenceEnable
+ .text.ADCSequenceConfigure
+                0x0000000000001204       0x4e /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000001204                ADCSequenceConfigure
+ .text.ADCSequenceStepConfigure
+                0x0000000000001252       0x74 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x0000000000001252                ADCSequenceStepConfigure
+ .text.ADCSequenceDataGet
+                0x00000000000012c6       0x1e /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x00000000000012c6                ADCSequenceDataGet
+ .text.ADCProcessorTrigger
+                0x00000000000012e4       0x18 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+                0x00000000000012e4                ADCProcessorTrigger
+ .text.IntMasterEnable
+                0x00000000000012fc        0xe /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x00000000000012fc                IntMasterEnable
+ .text.IntMasterDisable
+                0x000000000000130a        0xe /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x000000000000130a                IntMasterDisable
+ .text.IntRegister
+                0x0000000000001318       0x34 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x0000000000001318                IntRegister
+ .text.IntEnable
+                0x000000000000134c       0x60 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+                0x000000000000134c                IntEnable
+ .text.SysCtlPeripheralReady
+                0x00000000000013ac       0x24 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00000000000013ac                SysCtlPeripheralReady
+ .text.SysCtlPeripheralEnable
+                0x00000000000013d0       0x20 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+                0x00000000000013d0                SysCtlPeripheralEnable
+ .text.SysTickIntRegister
+                0x00000000000013f0       0x1c /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+                0x00000000000013f0                SysTickIntRegister
+ .text._UARTIntNumberGet
+                0x000000000000140c       0x44 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .text.UARTIntRegister
+                0x0000000000001450       0x1a /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+                0x0000000000001450                UARTIntRegister
+ .text.CPUcpsid
+                0x000000000000146a        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+                0x000000000000146a                CPUcpsid
+ .text.CPUcpsie
+                0x0000000000001472        0x8 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+                0x0000000000001472                CPUcpsie
+ *fill*         0x000000000000147a        0x2 
+ .text          0x000000000000147c      0x134 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+                0x000000000000147c                memcpy
+ .text.realloc  0x00000000000015b0       0x10 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-realloc.o)
+                0x00000000000015b0                realloc
+ .text._realloc_r
+                0x00000000000015c0      0x35c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reallocr.o)
+                0x00000000000015c0                _realloc_r
+ *fill*         0x000000000000191c       0x24 
+ .text          0x0000000000001940       0xdc /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-strlen.o)
+                0x0000000000001940                strlen
+ .text._malloc_trim_r
+                0x0000000000001a1c       0xa0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-freer.o)
+                0x0000000000001a1c                _malloc_trim_r
+ .text._free_r  0x0000000000001abc      0x1e8 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-freer.o)
+                0x0000000000001abc                _free_r
+ .text._malloc_r
+                0x0000000000001ca4      0x548 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+                0x0000000000001ca4                _malloc_r
+ .text.memmove  0x00000000000021ec       0xc8 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memmove.o)
+                0x00000000000021ec                memmove
+ .text.__malloc_lock
+                0x00000000000022b4        0xc /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mlock.o)
+                0x00000000000022b4                __malloc_lock
+ .text.__malloc_unlock
+                0x00000000000022c0        0xc /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mlock.o)
+                0x00000000000022c0                __malloc_unlock
+ .text._sbrk_r  0x00000000000022cc       0x24 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-sbrkr.o)
+                0x00000000000022cc                _sbrk_r
+ .text.__retarget_lock_acquire_recursive
+                0x00000000000022f0        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000022f0                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x00000000000022f4        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x00000000000022f4                __retarget_lock_release_recursive
+ .text._sbrk    0x00000000000022f8       0x1c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+                0x00000000000022f8                _sbrk
+ *(.glue_7t)
+ .glue_7t       0x0000000000002314        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x0000000000002314        0x0 linker stubs
+ *(.rodata .rodata* .gnu.linkonce.r.*)
+ .rodata._ZTVN8std_msgs4TimeE
+                0x0000000000002314       0x18 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000002314                vtable for std_msgs::Time
+ .rodata._ZTVN14rosserial_msgs9TopicInfoE
+                0x000000000000232c       0x18 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x000000000000232c                vtable for rosserial_msgs::TopicInfo
+ .rodata._ZTVN14rosserial_msgs3LogE
+                0x0000000000002344       0x18 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000002344                vtable for rosserial_msgs::Log
+ .rodata._ZTVN14rosserial_msgs20RequestParamResponseE
+                0x000000000000235c       0x18 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x000000000000235c                vtable for rosserial_msgs::RequestParamResponse
+ .rodata._ZTVN8std_msgs7Float32E
+                0x0000000000002374       0x18 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000002374                vtable for std_msgs::Float32
+ .rodata._ZTVN8std_msgs4BoolE
+                0x000000000000238c       0x18 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x000000000000238c                vtable for std_msgs::Bool
+ .rodata._ZTVN8std_msgs6StringE
+                0x00000000000023a4       0x18 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000023a4                vtable for std_msgs::String
+ .rodata._ZTVN25rosserial_tivac_tutorials5PanelE
+                0x00000000000023bc       0x18 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000023bc                vtable for rosserial_tivac_tutorials::Panel
+ .rodata._ZTVN3ros11NodeHandle_I13TivaCHardwareLi25ELi25ELi512ELi512EEE
+                0x00000000000023d4       0x14 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x00000000000023d4                vtable for ros::NodeHandle_<TivaCHardware, 25, 25, 512, 512>
+ .rodata._GLOBAL__sub_I_nh.str1.1
+                0x00000000000023e8        0xe CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN14rosserial_msgs20RequestParamResponse6getMD5Ev.str1.1
+                0x00000000000023f6       0x21 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN14rosserial_msgs3Log6getMD5Ev.str1.1
+                0x0000000000002417       0x21 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN14rosserial_msgs3Log7getTypeEv.str1.1
+                0x0000000000002438       0x13 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN14rosserial_msgs9TopicInfo6getMD5Ev.str1.1
+                0x000000000000244b       0x21 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN14rosserial_msgs9TopicInfo7getTypeEv.str1.1
+                0x000000000000246c       0x19 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN14rosserial_msgsL12REQUESTPARAME
+                0x0000000000002485       0x1c CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN25rosserial_tivac_tutorials5Panel6getMD5Ev.str1.1
+                0x00000000000024a1       0x21 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN25rosserial_tivac_tutorials5Panel7getTypeEv.str1.1
+                0x00000000000024c2       0x20 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN3ros11NodeHandle_I13TivaCHardwareLi25ELi25ELi512ELi512EE15negotiateTopicsEv.str1.1
+                0x00000000000024e2       0x20 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                                          0x1 (size before relaxing)
+ .rodata._ZN3ros11NodeHandle_I13TivaCHardwareLi25ELi25ELi512ELi512EE7publishEiPKNS_3MsgE.str1.1
+                0x00000000000024e2       0x39 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN8std_msgs4Bool6getMD5Ev.str1.1
+                0x000000000000251b       0x21 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN8std_msgs4Bool7getTypeEv.str1.1
+                0x000000000000253c        0xe CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN8std_msgs4Time6getMD5Ev.str1.1
+                0x000000000000254a       0x21 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN8std_msgs4Time7getTypeEv.str1.1
+                0x000000000000256b        0xe CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN8std_msgs6String6getMD5Ev.str1.1
+                0x0000000000002579       0x21 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN8std_msgs6String7getTypeEv.str1.1
+                0x000000000000259a       0x10 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN8std_msgs7Float326getMD5Ev.str1.1
+                0x00000000000025aa       0x21 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata._ZN8std_msgs7Float327getTypeEv.str1.1
+                0x00000000000025cb       0x11 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .rodata.main.str1.1
+                0x00000000000025dc        0xb CMakeFiles/demo.axf.dir/demo.cpp.obj
+ *fill*         0x00000000000025e7        0x1 
+ .rodata.g_pui32EnRegs
+                0x00000000000025e8       0x14 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .rodata.g_ppui32UARTIntMap
+                0x00000000000025fc       0x40 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .rodata.g_ppui32UARTIntMapSnowflake
+                0x000000000000263c       0x40 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x000000000000267c                . = ALIGN (0x4)
+ *(.init)
+                0x000000000000267c                . = ALIGN (0x4)
+                0x000000000000267c                __preinit_array_start = .
+ *(SORT_BY_NAME(.preinit_array*))
+ *(.preinit_array)
+                0x000000000000267c                __preinit_array_end = .
+                0x000000000000267c                . = ALIGN (0x4)
+                0x000000000000267c                __init_array_start = .
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array)
+ .init_array    0x000000000000267c        0x4 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000000002680                __init_array_end = .
+                0x0000000000002680                . = ALIGN (0x4)
+ *(.fini)
+                0x0000000000002680                . = ALIGN (0x4)
+                0x0000000000002680                __fini_array_start = .
+ *(.fini_array)
+ *(SORT_BY_NAME(.fini_array.*))
+                0x0000000000002680                __fini_array_end = .
+                0x0000000000002680                . = ALIGN (0x4)
+                0x0000000000002680                _etext = .
+
+.vfp11_veneer   0x0000000000002680        0x0
+ .vfp11_veneer  0x0000000000002680        0x0 linker stubs
+
+.v4_bx          0x0000000000002680        0x0
+ .v4_bx         0x0000000000002680        0x0 linker stubs
+
+.iplt           0x0000000000002680        0x0
+ .iplt          0x0000000000002680        0x0 CMakeFiles/demo.axf.dir/demo.cpp.obj
+
+.rel.dyn        0x0000000000002680        0x0
+ .rel.iplt      0x0000000000002680        0x0 CMakeFiles/demo.axf.dir/demo.cpp.obj
+
+.data           0x0000000020000000      0xaa8 load address 0x0000000000002680
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _data = .
+ *(vtable)
+ vtable         0x0000000020000000      0x26c /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ *(.data .data* .gnu.linkonce.d.*)
+ .data._impure_ptr
+                0x000000002000026c        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+                0x000000002000026c                _impure_ptr
+ .data.impure_data
+                0x0000000020000270      0x428 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+ .data.__malloc_av_
+                0x0000000020000698      0x408 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+                0x0000000020000698                __malloc_av_
+ .data.__malloc_sbrk_base
+                0x0000000020000aa0        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+                0x0000000020000aa0                __malloc_sbrk_base
+ .data.__malloc_trim_threshold
+                0x0000000020000aa4        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+                0x0000000020000aa4                __malloc_trim_threshold
+                0x0000000020000aa8                _edata = .
+
+.igot.plt       0x0000000020000aa8        0x0 load address 0x0000000000003128
+ .igot.plt      0x0000000020000aa8        0x0 CMakeFiles/demo.axf.dir/demo.cpp.obj
+
+.bss            0x0000000020000aa8      0x818 load address 0x0000000000003128
+                0x0000000020000aa8                . = ALIGN (0x4)
+                0x0000000020000aa8                _bss = .
+                0x0000000020000aa8                __bss_start__ = _bss
+ *(.bss*)
+ .bss.left_msg  0x0000000020000aa8       0x2c CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000020000aa8                left_msg
+ .bss.lpanel    0x0000000020000ad4       0x14 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000020000ad4                lpanel
+ .bss.nh        0x0000000020000ae8      0x730 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000020000ae8                nh
+ .bss.pub_temp  0x0000000020001218       0x14 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x0000000020001218                pub_temp
+ .bss.temp_msg  0x000000002000122c        0x8 CMakeFiles/demo.axf.dir/demo.cpp.obj
+                0x000000002000122c                temp_msg
+ .bss.g_ui32heartbeat
+                0x0000000020001234        0x4 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/tivac_hardware.cpp.obj
+                0x0000000020001234                g_ui32heartbeat
+ .bss.g_ui32milliseconds
+                0x0000000020001238        0x4 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/tivac_hardware.cpp.obj
+                0x0000000020001238                g_ui32milliseconds
+ .bss.rxBuffer  0x000000002000123c       0x10 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/tivac_hardware.cpp.obj
+                0x000000002000123c                rxBuffer
+ .bss.txBuffer  0x000000002000124c       0x10 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/tivac_hardware.cpp.obj
+                0x000000002000124c                txBuffer
+ .bss.__malloc_current_mallinfo
+                0x000000002000125c       0x28 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+                0x000000002000125c                __malloc_current_mallinfo
+ .bss.__malloc_max_sbrked_mem
+                0x0000000020001284        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+                0x0000000020001284                __malloc_max_sbrked_mem
+ .bss.__malloc_max_total_mem
+                0x0000000020001288        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+                0x0000000020001288                __malloc_max_total_mem
+ .bss.__malloc_top_pad
+                0x000000002000128c        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+                0x000000002000128c                __malloc_top_pad
+ .bss.heap_end.5377
+                0x0000000020001290        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+ *(COMMON)
+ COMMON         0x0000000020001294       0x21 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+                0x0000000020001294                __lock___atexit_recursive_mutex
+                0x0000000020001298                __lock___arc4random_mutex
+                0x000000002000129c                __lock___env_recursive_mutex
+                0x00000000200012a0                __lock___sinit_recursive_mutex
+                0x00000000200012a4                __lock___malloc_recursive_mutex
+                0x00000000200012a8                __lock___at_quick_exit_mutex
+                0x00000000200012ac                __lock___dd_hash_mutex
+                0x00000000200012b0                __lock___tz_mutex
+                0x00000000200012b4                __lock___sfp_recursive_mutex
+ *fill*         0x00000000200012b5        0x3 
+ COMMON         0x00000000200012b8        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reent.o)
+                0x00000000200012b8                errno
+                0x00000000200012bc                . = ALIGN (0x4)
+                0x00000000200012bc                _ebss = .
+                0x00000000200012bc                __bss_end__ = _ebss
+                0x00000000200012c0                . = ALIGN (0x8)
+ *fill*         0x00000000200012bc        0x4 
+                [!provide]                        PROVIDE (__exidx_start = .)
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                [!provide]                        PROVIDE (__exidx_end = .)
+                0x00000000200012c0                . = ALIGN (0x4)
+                0x00000000200012c0                _end = .
+                0x00000000200012c0                PROVIDE (end = _end)
+                0x0000000020008000                PROVIDE (_estack = (ORIGIN (SRAM) + LENGTH (SRAM)))
+OUTPUT(/home/ubuntu/catkin_bot/devel/share/rosserial_tivac_tutorials/demo.axf elf32-littlearm)
+
+.comment        0x0000000000000000       0x7f
+ .comment       0x0000000000000000       0x7f CMakeFiles/demo.axf.dir/demo.cpp.obj
+                                         0x80 (size before relaxing)
+ .comment       0x000000000000007f       0x80 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+ .comment       0x000000000000007f       0x80 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .comment       0x000000000000007f       0x80 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/time.cpp.obj
+ .comment       0x000000000000007f       0x80 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/tivac_hardware.cpp.obj
+ .comment       0x000000000000007f       0x80 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .comment       0x000000000000007f       0x80 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .comment       0x000000000000007f       0x80 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .comment       0x000000000000007f       0x80 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .comment       0x000000000000007f       0x80 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .comment       0x000000000000007f       0x80 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+
+.ARM.attributes
+                0x0000000000000000       0x37
+ .ARM.attributes
+                0x0000000000000000       0x39 CMakeFiles/demo.axf.dir/demo.cpp.obj
+ .ARM.attributes
+                0x0000000000000039       0x39 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/startup_gcc.c.obj
+ .ARM.attributes
+                0x0000000000000072       0x39 CMakeFiles/demo.axf.dir/home/ubuntu/tivaware/utils/ringbuf.c.obj
+ .ARM.attributes
+                0x00000000000000ab       0x39 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/time.cpp.obj
+ .ARM.attributes
+                0x00000000000000e4       0x39 CMakeFiles/demo.axf.dir/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/ros_lib/tivac_hardware.cpp.obj
+ .ARM.attributes
+                0x000000000000011d       0x39 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(adc.o)
+ .ARM.attributes
+                0x0000000000000156       0x39 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(interrupt.o)
+ .ARM.attributes
+                0x000000000000018f       0x39 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(sysctl.o)
+ .ARM.attributes
+                0x00000000000001c8       0x39 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(systick.o)
+ .ARM.attributes
+                0x0000000000000201       0x39 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(uart.o)
+ .ARM.attributes
+                0x000000000000023a       0x39 /home/ubuntu/tivaware/driverlib/gcc/libdriver.a(cpu.o)
+ .ARM.attributes
+                0x0000000000000273       0x20 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x0000000000000293       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-realloc.o)
+ .ARM.attributes
+                0x00000000000002c7       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reallocr.o)
+ .ARM.attributes
+                0x00000000000002fb       0x20 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x000000000000031b       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-freer.o)
+ .ARM.attributes
+                0x000000000000034f       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000000000383       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+ .ARM.attributes
+                0x00000000000003b7       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x00000000000003eb       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x000000000000041f       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x0000000000000453       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .ARM.attributes
+                0x0000000000000487       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reent.o)
+ .ARM.attributes
+                0x00000000000004bb       0x34 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
+
+.debug_frame    0x0000000000000000      0x320
+ .debug_frame   0x0000000000000000       0x20 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-realloc.o)
+ .debug_frame   0x0000000000000020       0x58 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reallocr.o)
+ .debug_frame   0x0000000000000078       0x80 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-freer.o)
+ .debug_frame   0x00000000000000f8       0x54 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mallocr.o)
+ .debug_frame   0x000000000000014c       0x40 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-memmove.o)
+ .debug_frame   0x000000000000018c       0x30 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-mlock.o)
+ .debug_frame   0x00000000000001bc       0x2c /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x00000000000001e8       0xb0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-lock.o)
+ .debug_frame   0x0000000000000298       0x68 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc.a(lib_a-reent.o)
+ .debug_frame   0x0000000000000300       0x20 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libnosys.a(sbrk.o)
