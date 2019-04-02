@@ -43,7 +43,7 @@ extern "C"
 //
 //*****************************************************************************
 #define MSDI_REG_RW_R               0x00000000  // Read register mask MSB set to 0
-#define MSDI_REG_RW_W               0x10000000  // Write register mask MSB set to 1
+#define MSDI_REG_RW_W               0x80000000  // Write register mask MSB set to 1
 
 
 

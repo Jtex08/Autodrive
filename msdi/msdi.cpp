@@ -13,6 +13,7 @@ extern "C"
  #include "driverlib/sysctl.h"
  #include <inc/hw_types.h>
  #include <driverlib/debug.h>
+ #include "msdi.h"
 }
 
 // ROS includes
@@ -63,4 +64,28 @@ int main(void)
     //If SSI0FSS fails to work switch to direct control
     //GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE,GPIO_PIN_3);
 
+    //Set GPIO Pin type to SSI
+
     GPIOPinTypeSSI(GPIO_PORTA_BASE, GPIO_PIN_5 | GPIO_PIN_4 | GPIO_PIN_3| GPIO_PIN_2);
+
+
+    //Config SSI Clock for SSIO with Polarity and Phase 0
+    SSIConfigSetExpClk(SSI0_BASE, SysCtlClockGet(), SSI_FRF_MOTO_MODE_0,
+                       SSI_MODE_MASTER, 2000000, 16);
+
+    //
+    // Enable the SSI0 module.
+    //
+    SSIEnable(SSI0_BASE);
+
+    /*Read Function
+    Take register you want to read
+    Shift left one
+    Do parity check and set if needed
+    Split data into two 16 bit words
+    Transmit both words
+
+    Get data in two 16 bit words
+
+    Shift MSBs left 8 bits then or with LSBs for full 32 bit value.*/
+    
