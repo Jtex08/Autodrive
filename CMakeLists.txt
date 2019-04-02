@@ -33,24 +33,24 @@ add_dependencies(${PROJECT_NAME}_ros_lib ${${PROJECT_NAME}_EXPORTED_TARGETS})
 
 
 #DEMO
-#rosserial_configure_client(
- # DIRECTORY demo
-  #TOOLCHAIN_FILE ${ROSSERIAL_TIVAC_TOOLCHAIN}
-#)
-#rosserial_add_client_target(demo demo.axf ALL)
-#rosserial_add_client_target(demo flash)
-#rosserial_add_client_target(demo size)
-#rosserial_add_client_target(demo dump)
+rosserial_configure_client(
+  DIRECTORY demo
+  TOOLCHAIN_FILE ${ROSSERIAL_TIVAC_TOOLCHAIN}
+)
+rosserial_add_client_target(demo demo.axf ALL)
+rosserial_add_client_target(demo flash)
+rosserial_add_client_target(demo size)
+rosserial_add_client_target(demo dump)
 
 #MSDI
-#rosserial_configure_client(
- # DIRECTORY msdi
-  #TOOLCHAIN_FILE ${ROSSERIAL_TIVAC_TOOLCHAIN}
-#)
-#rosserial_add_client_target(msdi msdi.axf ALL)
-#rosserial_add_client_target(msdi flash)
-#rosserial_add_client_target(msdi size)
-#rosserial_add_client_target(msdi dump)
+rosserial_configure_client(
+  DIRECTORY msdi
+  TOOLCHAIN_FILE ${ROSSERIAL_TIVAC_TOOLCHAIN}
+)
+rosserial_add_client_target(msdi msdi.axf ALL)
+rosserial_add_client_target(msdi flash)
+rosserial_add_client_target(msdi size)
+rosserial_add_client_target(msdi dump)
 
 # Chatter tutorial
 rosserial_configure_client(
