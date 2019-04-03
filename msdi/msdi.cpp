@@ -39,6 +39,8 @@ int main(void)
   nh.advertise(pub_raw);
   nh.advertise(lpanel);
 
+  uint32_t ui32DataTx[NUM_SSI_DATA];
+
   char info[11] = "Left Panel";
   left_msg.panel_location.data = info;
 
@@ -78,6 +80,10 @@ int main(void)
     //
     SSIEnable(SSI0_BASE);
 
+    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOA))
+    {
+    }
+
     /*Read Function
     Take register you want to read
     Shift left one
@@ -88,4 +94,62 @@ int main(void)
     Get data in two 16 bit words
 
     Shift MSBs left 8 bits then or with LSBs for full 32 bit value.*/
-    
+
+    uint32_t reg_val;
+    uint32_t rec_val;
+
+
+
+    reg_val = DEVICE_ID<<1;
+    //Need parity function
+    ui32DataTx[0] = reg_val>>16;
+    ui32DataTx[1] = reg_val & 0x0000FFFF;
+
+
+    //Send data
+
+    for(ui32Index = 0; ui32Index < NUM_SSI_DATA; ui32Index++)
+    {
+
+
+
+      SSIDataPut(SSI0_BASE, pui32DataTx[ui32Index]);
+      while(SSIBusy(SSI0_BASE))
+      {
+      }
+
+     }
+
+    for(ui32Index = 0; ui32Index < NUM_SSI_DATA; ui32Index++)
+    {
+     
+
+
+         SSIDataGet(SSI0_BASE, &pui32DataRx[ui32Index]);
+         SSIDataPut(SSI0_BASE, 0xFFFF); //Dummy
+
+         while(SSIBusy(SSI0_BASE))
+         {
+         }
+
+
+
+
+         //
+         // Since we are using 8-bit data, mask off the MSB.
+         //
+         //pui32DataRx[ui32Index] &= 0x00FF;
+
+
+     }
+
+     rec_val = ((pui32DataRx[0]<<16) | pui32DataRx[1]);
+
+}
+
+
+
+
+
+
+
