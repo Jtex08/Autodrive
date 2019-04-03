@@ -33,14 +33,14 @@ add_dependencies(${PROJECT_NAME}_ros_lib ${${PROJECT_NAME}_EXPORTED_TARGETS})
 
 
 #DEMO
-rosserial_configure_client(
-  DIRECTORY demo
-  TOOLCHAIN_FILE ${ROSSERIAL_TIVAC_TOOLCHAIN}
-)
-rosserial_add_client_target(demo demo.axf ALL)
-rosserial_add_client_target(demo flash)
-rosserial_add_client_target(demo size)
-rosserial_add_client_target(demo dump)
+#rosserial_configure_client(
+  #DIRECTORY demo
+ # TOOLCHAIN_FILE ${ROSSERIAL_TIVAC_TOOLCHAIN}
+#)
+#rosserial_add_client_target(demo demo.axf ALL)
+#rosserial_add_client_target(demo flash)
+#rosserial_add_client_target(demo size)
+#rosserial_add_client_target(demo dump)
 
 #MSDI
 rosserial_configure_client(
