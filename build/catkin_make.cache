@@ -1,2 +1,0 @@
-rosserial_tivac_tutorials
--DCATKIN_DEVEL_PREFIX=/home/ubuntu/catkin_bot/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/catkin_bot/install -G Unix Makefiles

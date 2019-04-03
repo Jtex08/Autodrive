@@ -1,7 +1,0 @@
-/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/demo/CMakeFiles/edit_cache.dir
-/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/demo/CMakeFiles/flash.dir
-/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/demo/CMakeFiles/build_driverlib.dir
-/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/demo/CMakeFiles/rebuild_cache.dir
-/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/demo/CMakeFiles/demo.axf.dir
-/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/demo/CMakeFiles/dump.dir
-/home/ubuntu/catkin_bot/build/rosserial_tivac_tutorials/demo/CMakeFiles/size.dir
