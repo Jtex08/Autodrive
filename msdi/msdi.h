@@ -71,7 +71,7 @@ typedef enum
 // The following values define the Read/Write Masks
 //
 //*****************************************************************************
-#define MSDI_REG_RW_R               0x7E000000  // Read register mask MSB set to 0, 6 register ID Bits, rest 0 prior to Parity
+#define MSDI_REG_R_MASK               0x7E000000  // Read register mask MSB set to 0, 6 register ID Bits, rest 0 prior to Parity
 #define MSDI_REG_RW_W               0x80000000  // Write register mask MSB set to 1
 
 /*****************************************************************************

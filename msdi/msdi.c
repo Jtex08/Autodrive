@@ -170,3 +170,7 @@ static msdi_parity_t MSDI_PARITY(uint32_t raw_val)
     }   
 
 }
+
+/*
+**Public Functions
+*/
