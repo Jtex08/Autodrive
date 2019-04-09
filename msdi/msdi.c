@@ -32,7 +32,7 @@
 **Returns status
  */
 //static msdi_status_t MSDI_DATA_TRANSFER(
-void MSDI_DATA_TRANSFER(
+static void MSDI_DATA_TRANSFER(
 	const uint32_t send_data[NUM_SSI_DATA], uint32_t* const rcv_data[NUM_SSI_DATA]);
 
 /*Function: MSDI_WRITE
@@ -41,7 +41,15 @@ void MSDI_DATA_TRANSFER(
 **          Register name data is to be written to
 **          Register setting 
 */
-void MSDI_WRITE(uint32_t uiRegister,uint32_t uiSetting);
+static void MSDI_WRITE(uint32_t ui32Register,uint32_t uiSetting);
+
+/*Function: MSDI_READ
+**Reads data from register
+**Parameters:
+**          ui32Register: Register name data is to be read from
+**          ui32DataRx: Pointer to data received storage
+*/
+static void MSDI_READ(uint32_t ui32Register,uint32_t ui32DataRx[NUM_SSI_DATA])
 
 /*Function Name: MSDI_PARITY
 **Description: Checks raw data for odd parity
@@ -49,6 +57,9 @@ void MSDI_WRITE(uint32_t uiRegister,uint32_t uiSetting);
 **Returns: 0 if parity bit doesn't need to be set, 1 if parity bit needs to be set
 */
 static msdi_parity_t MSDI_PARITY(uint32_t raw_val);
+
+
+
 /*
 **Private Functions Code
 */
@@ -56,7 +67,7 @@ static msdi_parity_t MSDI_PARITY(uint32_t raw_val);
 /*Function Name: MSDI_DATA_TRANSFER
 **Description: This function transfers the upper and lower 32 bits of data while simultaneously reading MISO bits
 */
-void MSDI_DATA_TRANSFER(
+static void MSDI_DATA_TRANSFER(
 	const uint32_t send_data[NUM_SSI_DATA], uint32_t* const rcv_data[NUM_SSI_DATA])
 {
 //msdi_status_t status = MSDI_STATUS_SUCCESS;
@@ -90,12 +101,12 @@ void MSDI_DATA_TRANSFER(
 /*Function Name: MSDI_WRITE
 **Description: Prepares data to be sent to write to a register
 */
-void MSDI_WRITE(uint32_t uiRegister,uint32_t uiSetting);
+static void MSDI_WRITE(uint32_t ui32Register,uint32_t ui32Setting, uint32_t ui32DataRx[NUM_SSI_DATA])
 {
     uint32_t ui32DataTx[NUM_SSI_DATA];
-    uint32_t pui32DataRx[NUM_SSI_DATA];
+   // uint32_t pui32DataRx[NUM_SSI_DATA];
 
-    uint32_t raw_val = (MSDI_REG_RW_W | (uiRegister<<1) | (uiSetting<<1));
+    uint32_t raw_val = (MSDI_REG_RW_W | (ui32Register<<1) | (ui32Setting<<1));
 
     msdi_parity_t status = MSDI_PARITY(raw_val);
 
@@ -108,18 +119,40 @@ void MSDI_WRITE(uint32_t uiRegister,uint32_t uiSetting);
     ui32DataTx[0] = raw_val>>16;
     ui32DataTx[1] = raw_val & LOWER_TRANSFER_MASK;
 
-    MSDI_DATA_TRANSFER(ui32DataTx,)//NEED TO FINISH need to pass an address from the top calling function to where the data will be stored
-
-
-
-
-
-
+    MSDI_DATA_TRANSFER(ui32DataTx,ui32DataRx);//possible issue with ui32DataRx
+    
 }
+
+/*Function Name: MSDI_WRITE
+**Description: Prepares data to be sent to write to a register
+*/
+static void MSDI_READ(uint32_t ui32Register,uint32_t ui32DataRx[NUM_SSI_DATA])
+{
+    uint32_t ui32DataTx[NUM_SSI_DATA];
+   // uint32_t pui32DataRx[NUM_SSI_DATA];
+
+    uint32_t raw_val = MSDI_REG_R_MASK & (ui32Register<<1);
+
+    msdi_parity_t status = MSDI_PARITY(raw_val);
+
+    if (status == SET_PARITY_BIT)
+    {
+        raw_val = raw_val | SET_PARITY_BIT_MASK;
+
+    }
+
+    ui32DataTx[0] = raw_val>>16;
+    ui32DataTx[1] = raw_val & LOWER_TRANSFER_MASK;
+
+    MSDI_DATA_TRANSFER(ui32DataTx,ui32DataRx);//possible issue with ui32DataRx
+    
+}
+
+
 /*Function Name: MSDI_PARITY
 **Description: Checks raw data to see if the parity bit needs to be set
 */
-msdi_parity_t MSDI_PARITY(uint32_t raw_val)
+static msdi_parity_t MSDI_PARITY(uint32_t raw_val)
 {
     //unsigned int v = 0x11011000; // 32-bit word
     raw_val ^= raw_val >> 1;
