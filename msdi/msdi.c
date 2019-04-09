@@ -33,7 +33,7 @@
  */
 //static msdi_status_t MSDI_DATA_TRANSFER(
 static void MSDI_DATA_TRANSFER(
-	const uint32_t send_data[NUM_SSI_DATA], uint32_t* const rcv_data[NUM_SSI_DATA]);
+	 uint32_t send_data[], uint32_t rcv_data[]);
 
 /*Function: MSDI_WRITE
 **Prepares data to be sent
@@ -41,7 +41,7 @@ static void MSDI_DATA_TRANSFER(
 **          Register name data is to be written to
 **          Register setting 
 */
-static void MSDI_WRITE(uint32_t ui32Register,uint32_t uiSetting);
+static void MSDI_WRITE(uint32_t ui32Register,uint32_t uiSetting,uint32_t pui32DataRx[]);
 
 /*Function: MSDI_READ
 **Reads data from register
@@ -49,7 +49,7 @@ static void MSDI_WRITE(uint32_t ui32Register,uint32_t uiSetting);
 **          ui32Register: Register name data is to be read from
 **          ui32DataRx: Pointer to data received storage
 */
-static void MSDI_READ(uint32_t ui32Register,uint32_t ui32DataRx[NUM_SSI_DATA])
+static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[]);
 
 /*Function Name: MSDI_PARITY
 **Description: Checks raw data for odd parity
@@ -68,7 +68,7 @@ static msdi_parity_t MSDI_PARITY(uint32_t raw_val);
 **Description: This function transfers the upper and lower 32 bits of data while simultaneously reading MISO bits
 */
 static void MSDI_DATA_TRANSFER(
-	const uint32_t send_data[NUM_SSI_DATA], uint32_t* const rcv_data[NUM_SSI_DATA])
+	uint32_t send_data[], uint32_t  rcv_data[])
 {
 //msdi_status_t status = MSDI_STATUS_SUCCESS;
 
@@ -101,7 +101,7 @@ static void MSDI_DATA_TRANSFER(
 /*Function Name: MSDI_WRITE
 **Description: Prepares data to be sent to write to a register
 */
-static void MSDI_WRITE(uint32_t ui32Register,uint32_t ui32Setting, uint32_t pui32DataRx[NUM_SSI_DATA])
+static void MSDI_WRITE(uint32_t ui32Register,uint32_t ui32Setting, uint32_t pui32DataRx[])
 {
     uint32_t ui32DataTx[NUM_SSI_DATA];
    // uint32_t pui32DataRx[NUM_SSI_DATA];
@@ -126,7 +126,7 @@ static void MSDI_WRITE(uint32_t ui32Register,uint32_t ui32Setting, uint32_t pui3
 /*Function Name: MSDI_WRITE
 **Description: Prepares data to be sent to write to a register
 */
-static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[NUM_SSI_DATA])//changed from void to uin32_t for testing//
+static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[])//changed from void to uin32_t for testing//
 {
     uint32_t ui32DataTx[NUM_SSI_DATA];
    // uint32_t pui32DataRx[NUM_SSI_DATA];
@@ -180,7 +180,7 @@ static msdi_parity_t MSDI_PARITY(uint32_t raw_val)
 /*Function Name: TEST_FUNC
 **Description: Test function to see if files can build, and if data can be returned
 */
-uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[NUM_SSI_DATA])
+uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[])
 {
     uint32_t rslt = MSDI_READ(ui32Register, pui32DataRx);
 

@@ -121,7 +121,7 @@ typedef enum
 **            ui32DataRX = pointer to storing value
 **Returns: Will change according to need
 */
-uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[NUM_SSI_DATA]);
+uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[]);
 
 
 
