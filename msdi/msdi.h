@@ -10,6 +10,13 @@
 #ifndef __MSDI_H__
 #define __MSDI_H__
 
+/*******************************************************************************
+ * Includes
+ ******************************************************************************/
+
+#include <stdbool.h>
+#include <stdint.h>
+#include <stddef.h>
 
 //*****************************************************************************
 //
@@ -71,7 +78,7 @@ typedef enum
 // The following values define the Read/Write Masks
 //
 //*****************************************************************************
-#define MSDI_REG_R_MASK               0x7E000000  // Read register mask MSB set to 0, 6 register ID Bits, rest 0 prior to Parity
+#define MSDI_REG_R_MASK             0x7E000000  // Read register mask MSB set to 0, 6 register ID Bits, rest 0 prior to Parity
 #define MSDI_REG_RW_W               0x80000000  // Write register mask MSB set to 1
 
 /*****************************************************************************
@@ -108,8 +115,13 @@ typedef enum
 //
 //*****************************************************************************
 
-
-
+/*Function Name: TEST_FUNC
+**Description: Test function
+**Parameters: ui32Register = register name
+**            ui32DataRX = pointer to storing value
+**Returns: Will change according to need
+*/
+uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[NUM_SSI_DATA]);
 
 
 

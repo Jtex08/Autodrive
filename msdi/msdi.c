@@ -101,7 +101,7 @@ static void MSDI_DATA_TRANSFER(
 /*Function Name: MSDI_WRITE
 **Description: Prepares data to be sent to write to a register
 */
-static void MSDI_WRITE(uint32_t ui32Register,uint32_t ui32Setting, uint32_t ui32DataRx[NUM_SSI_DATA])
+static void MSDI_WRITE(uint32_t ui32Register,uint32_t ui32Setting, uint32_t pui32DataRx[NUM_SSI_DATA])
 {
     uint32_t ui32DataTx[NUM_SSI_DATA];
    // uint32_t pui32DataRx[NUM_SSI_DATA];
@@ -119,14 +119,14 @@ static void MSDI_WRITE(uint32_t ui32Register,uint32_t ui32Setting, uint32_t ui32
     ui32DataTx[0] = raw_val>>16;
     ui32DataTx[1] = raw_val & LOWER_TRANSFER_MASK;
 
-    MSDI_DATA_TRANSFER(ui32DataTx,ui32DataRx);//possible issue with ui32DataRx
+    MSDI_DATA_TRANSFER(ui32DataTx,pui32DataRx);//possible issue with ui32DataRx
     
 }
 
 /*Function Name: MSDI_WRITE
 **Description: Prepares data to be sent to write to a register
 */
-static void MSDI_READ(uint32_t ui32Register,uint32_t ui32DataRx[NUM_SSI_DATA])
+static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[NUM_SSI_DATA])//changed from void to uin32_t for testing//
 {
     uint32_t ui32DataTx[NUM_SSI_DATA];
    // uint32_t pui32DataRx[NUM_SSI_DATA];
@@ -144,7 +144,9 @@ static void MSDI_READ(uint32_t ui32Register,uint32_t ui32DataRx[NUM_SSI_DATA])
     ui32DataTx[0] = raw_val>>16;
     ui32DataTx[1] = raw_val & LOWER_TRANSFER_MASK;
 
-    MSDI_DATA_TRANSFER(ui32DataTx,ui32DataRx);//possible issue with ui32DataRx
+    MSDI_DATA_TRANSFER(ui32DataTx,pui32DataRx);//possible issue with pui32DataRx
+
+    return raw_val;
     
 }
 
@@ -171,6 +173,16 @@ static msdi_parity_t MSDI_PARITY(uint32_t raw_val)
 
 }
 
+
 /*
 **Public Functions
 */
+/*Function Name: TEST_FUNC
+**Description: Test function to see if files can build, and if data can be returned
+*/
+uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[NUM_SSI_DATA])
+{
+    uint32_t rslt = MSDI_READ(ui32Register, pui32DataRx);
+
+    return rslt;
+}
