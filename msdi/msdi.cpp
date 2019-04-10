@@ -102,10 +102,38 @@ int main(void)
     uint32_t reg_val;
     uint32_t rec_val;
 
+    uint32_t TFT = TEST_FUNC_TWO(IN_STAT_COMP, pui32DataRX)
+
+     raw_msg.data = TFT;
+     pub_raw.publish(&raw_msg);
+
+     nh.spinOnce();
+     
+     // Delay for a bit.
+     nh.getHardware()->delay(500);
+
+     raw_msg.data = pui32DataRx[0];
+     pub_raw.publish(&raw_msg);
+
+     nh.spinOnce();
+     
+     // Delay for a bit.
+     nh.getHardware()->delay(500);
+
+     
+     raw_msg.data = pui32DataRx[1];
+     pub_raw.publish(&raw_msg);
+
+     nh.spinOnce();
+     
+     // Delay for a bit.
+     nh.getHardware()->delay(500);
+
+
     while(1)
     {
 
-    uint32_t rslt = TEST_FUNC(DEVICE_ID,pui32DataRx);
+    uint32_t rslt = TEST_FUNC(IN_STAT_COMP,pui32DataRx);
 
      raw_msg.data = rslt;
      pub_raw.publish(&raw_msg);

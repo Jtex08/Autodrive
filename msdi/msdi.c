@@ -186,3 +186,22 @@ uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[])
 
     return rslt;
 }
+
+
+/*
+/*Function Name: TEST_FUNC_TWO
+**Description: Test function to see if files can build, and if data can be returned
+*/
+uint32_t TEST_FUNC_TWO(uint32_t ui32Register,uint32_t pui32DataRx[])
+{
+    uint32_t enable = 0x00F0000F;
+    MSDI_WRITE(IN_EN, enable, pui32DataRx);
+
+    uint32_t cfig = 0x00000800;
+
+    MSDI_WRITE(CONFIG, cfig, pui32DataRx);
+    
+    uint32_t rslt = MSDI_READ(ui32Register, pui32DataRx);
+
+    return rslt;
+}

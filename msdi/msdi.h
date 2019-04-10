@@ -123,6 +123,12 @@ typedef enum
 */
 uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[]);
 
+/*Function Name: TEST_FUNC_TWO
+**Description: Test function
+**Parameters: ui32Register = register name
+**            ui32DataRX = pointer to storing value
+**Returns: Will change according to need*/
+uint32_t TEST_FUNC_TWO(uint32_t ui32Register,uint32_t pui32DataRx[]);
 
 
 //*****************************************************************************
