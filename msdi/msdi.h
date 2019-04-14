@@ -61,6 +61,23 @@ typedef enum
 #define CRC                     0x03000000  // CRC Result Register
 #define IN_STAT_MISC            0x04000000  // Misc Status Register
 #define IN_STAT_COMP            0x05000000  // Comparator Status Register
+#define IN_STAT_ADC0            0x06000000  // ADC Status Register
+#define IN_STAT_ADC1            0x07000000  // ADC Status Register
+#define IN_STAT_MATRIX0         0x08000000  // Matrix Status Register
+#define IN_STAT_MATRIX1         0x09000000  // Matrix Status Register
+#define ANA_STAT0               0x0A000000  // ADC Raw Code Register
+#define ANA_STAT1               0x0B000000  // ADC Raw Code Register
+#define ANA_STAT2               0x0C000000  // ADC Raw Code Register
+#define ANA_STAT3               0x0D000000  // ADC Raw Code Register
+#define ANA_STAT4               0x0E000000  // ADC Raw Code Register
+#define ANA_STAT5               0x0F000000  // ADC Raw Code Register
+#define ANA_STAT6               0x10000000  // ADC Raw Code Register
+#define ANA_STAT7               0x11000000  // ADC Raw Code Register
+#define ANA_STAT8               0x12000000  // ADC Raw Code Register
+#define ANA_STAT9               0x13000000  // ADC Raw Code Register
+#define ANA_STAT10              0x14000000  // ADC Raw Code Register
+#define ANA_STAT11              0x15000000  // ADC Raw Code Register
+#define ANA_STAT12              0x16000000  // ADC Raw Code Register
 #define CONFIG                  0x1A000000  // Device Global Configuration Register
 #define IN_EN                   0x1B000000  // Input Enable Register
 #define CS_SELECT               0x1C000000  // Current Source/Sink Selection Register
@@ -72,6 +89,20 @@ typedef enum
 #define INT_EN_COMP1            0x22000000  // Comparator Input Interrupt Generation Control Register
 #define INT_EN_COMP2            0x23000000  // Comparator Input Interrupt Generation Control Register
 #define INT_EN_CFG0             0x24000000  // Global Interrupt Generation Control Register
+#define INT_EN_CFG1             0x25000000  // ADC Input Interrupt Generation Control Register
+#define INT_EN_CFG2             0x26000000  // ADC Input Interrupt Generation Control Register
+#define INT_EN_CFG3             0x27000000  // ADC Input Interrupt Generation Control Register
+#define INT_EN_CFG4             0x28000000  // ADC Input Interrupt Generation Control Register
+#define THRES_CFG0              0x29000000  // ADC Threshold Control Register
+#define THRES_CFG1              0x2A000000  // ADC Threshold Control Register
+#define THRES_CFG2              0x2B000000  // ADC Threshold Control Register
+#define THRES_CFG3              0x2C000000  // ADC Threshold Control Register
+#define THRES_CFG4              0x2D000000  // ADC Threshold Control Register
+#define THRESMAP_CFG0           0x2E000000  // ADC Threshold Mapping Register
+#define THRESMAP_CFG1           0x2F000000  // ADC Threshold Mapping Register
+#define THRESMAP_CFG2           0x30000000  // ADC Threshold Mapping Register
+#define Matrix                  0x31000000  // Matrix Setting Register
+#define Mode                    0x32000000  // Mode Setting Register
 
 //*****************************************************************************
 //
