@@ -13,7 +13,7 @@ add_definitions(-DRX_BUFFER_SIZE=256)
 
 # Generate target for TivaC
 generate_tivac_firmware(
-  SRCS msdi.cpp
+  SRCS msdi.cpp msdi.c
   INCS .
   BOARD tm4c123gxl
 )

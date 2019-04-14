@@ -39,8 +39,8 @@ int main(void)
   nh.advertise(pub_raw);
   nh.advertise(lpanel);
 
-  uint32_t ui32DataTx[NUM_SSI_DATA];
-  uint32_t ui32Index;
+//  uint32_t ui32DataTx[NUM_SSI_DATA];
+//  uint32_t ui32Index;
   uint32_t pui32DataRx[NUM_SSI_DATA];
 
   char info[11] = "Left Panel";
@@ -73,8 +73,8 @@ int main(void)
     GPIOPinTypeSSI(GPIO_PORTA_BASE, GPIO_PIN_5 | GPIO_PIN_4 | GPIO_PIN_2);
 
 
-    //Config SSI Clock for SSIO with Polarity and Phase 0
-    SSIConfigSetExpClk(SSI0_BASE, SysCtlClockGet(), SSI_FRF_MOTO_MODE_0,
+    //Config SSI Clock for SSIO with Polarity 0 and Phase 1
+    SSIConfigSetExpClk(SSI0_BASE, SysCtlClockGet(), SSI_FRF_MOTO_MODE_1,
                        SSI_MODE_MASTER, 2000000, 16);
 
     //
@@ -99,117 +99,49 @@ int main(void)
 
     Shift MSBs left 8 bits then or with LSBs for full 32 bit value.*/
 
-    uint32_t reg_val;
-    uint32_t rec_val;
+  //  uint32_t reg_val;
+  //  uint32_t rec_val;
+    nh.getHardware()->delay(500);
+    uint32_t TFT = TEST_FUNC_TWO(IN_STAT_COMP, pui32DataRx);
+
+     raw_msg.data = TFT;
+     pub_raw.publish(&raw_msg);
+
+     nh.spinOnce();
+     
+     // Delay for a bit.
+     nh.getHardware()->delay(500);
+
+     raw_msg.data = pui32DataRx[0];
+     pub_raw.publish(&raw_msg);
+
+     nh.spinOnce();
+     
+     // Delay for a bit.
+     nh.getHardware()->delay(500);
+
+     
+     raw_msg.data = pui32DataRx[1];
+     pub_raw.publish(&raw_msg);
+
+     nh.spinOnce();
+     
+     // Delay for a bit.
+     nh.getHardware()->delay(500);
+
 
     while(1)
     {
 
-    reg_val = DEVICE_ID<<1;
+    uint32_t rslt = TEST_FUNC(IN_EN,pui32DataRx);
 
-    raw_msg.data = reg_val;
-    pub_raw.publish(&raw_msg);
+     raw_msg.data = rslt;
+     pub_raw.publish(&raw_msg);
 
-    nh.spinOnce();
+     nh.spinOnce();
      
      // Delay for a bit.
-    nh.getHardware()->delay(500);
-
-    
-    //Need parity function
-    ui32DataTx[0] = reg_val>>16;
-
-    raw_msg.data = ui32DataTx[0];
-    pub_raw.publish(&raw_msg);
-
-    nh.spinOnce();
-     
-     // Delay for a bit.
-    nh.getHardware()->delay(500);
-
-     
-    ui32DataTx[1] = reg_val & 0x0000FFFF;
-
-    raw_msg.data = ui32DataTx[1];
-    pub_raw.publish(&raw_msg);
-
-    nh.spinOnce();
-     
-     // Delay for a bit.
-    nh.getHardware()->delay(500);
-
-         //Put cs low
-    GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_3, 0);
-
-
-    //Send data
-
-    // for(ui32Index = 0; ui32Index < NUM_SSI_DATA; ui32Index++)
-    //{
-
-
-
-    //  SSIDataPut(SSI0_BASE, ui32DataTx[ui32Index]);
-    SSIDataPut(SSI0_BASE, ui32DataTx[0]);
-    SSIDataGet(SSI0_BASE, &pui32DataRx[0]);
-      while(SSIBusy(SSI0_BASE))
-      {
-      }
-
-      //}
-     SSIDataPut(SSI0_BASE, ui32DataTx[1]);
-     SSIDataGet(SSI0_BASE,&pui32DataRx[1]);
-      while(SSIBusy(SSI0_BASE))
-      {
-      }
-
-      //}
-
-        //cs high
-   GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_3);
-
-   //  GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_3, 0);
-
-
-   //for(ui32Index = 0; ui32Index < NUM_SSI_DATA; ui32Index++)
-   //{
-     
-
-
-   //  SSIDataGet(SSI0_BASE, &pui32DataRx[0]);
-	 // SSIDataPut(SSI0_BASE, 0x0000); //Dummy
-
-	 // while(SSIBusy(SSI0_BASE))
-	 //     {
-         //}
-
-	 
-   //    SSIDataGet(SSI0_BASE,&pui32DataRx[1]);
-   //   SSIDataPut(SSI0_BASE, 0x0000); //Dummy
-
-   //   while(SSIBusy(SSI0_BASE))
-   //     {
-   //}
-
-
-
-
-
-
-         //
-         // Since we are using 8-bit data, mask off the MSB.
-         //
-         //pui32DataRx[ui32Index] &= 0x00FF;
-
-
-     
-
-   // GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_3);
-
-     // rec_val = ((pui32DataRx[0]<<16) | pui32DataRx[1]);
-
-     //  while(1)
-     // {
+     nh.getHardware()->delay(500);
 
      raw_msg.data = pui32DataRx[0];
      pub_raw.publish(&raw_msg);
