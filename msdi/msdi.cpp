@@ -73,8 +73,8 @@ int main(void)
     GPIOPinTypeSSI(GPIO_PORTA_BASE, GPIO_PIN_5 | GPIO_PIN_4 | GPIO_PIN_2);
 
 
-    //Config SSI Clock for SSIO with Polarity and Phase 0
-    SSIConfigSetExpClk(SSI0_BASE, SysCtlClockGet(), SSI_FRF_MOTO_MODE_0,
+    //Config SSI Clock for SSIO with Polarity 0 and Phase 1
+    SSIConfigSetExpClk(SSI0_BASE, SysCtlClockGet(), SSI_FRF_MOTO_MODE_1,
                        SSI_MODE_MASTER, 2000000, 16);
 
     //
@@ -101,7 +101,7 @@ int main(void)
 
   //  uint32_t reg_val;
   //  uint32_t rec_val;
-    nh.getHardware()->delay(50000);
+    nh.getHardware()->delay(500);
     uint32_t TFT = TEST_FUNC_TWO(IN_STAT_COMP, pui32DataRx);
 
      raw_msg.data = TFT;
