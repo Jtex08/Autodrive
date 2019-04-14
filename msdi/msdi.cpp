@@ -39,8 +39,8 @@ int main(void)
   nh.advertise(pub_raw);
   nh.advertise(lpanel);
 
-  uint32_t ui32DataTx[NUM_SSI_DATA];
-  uint32_t ui32Index;
+//  uint32_t ui32DataTx[NUM_SSI_DATA];
+//  uint32_t ui32Index;
   uint32_t pui32DataRx[NUM_SSI_DATA];
 
   char info[11] = "Left Panel";
@@ -99,10 +99,10 @@ int main(void)
 
     Shift MSBs left 8 bits then or with LSBs for full 32 bit value.*/
 
-    uint32_t reg_val;
-    uint32_t rec_val;
-
-    uint32_t TFT = TEST_FUNC_TWO(IN_STAT_COMP, pui32DataRX)
+  //  uint32_t reg_val;
+  //  uint32_t rec_val;
+    nh.getHardware()->delay(50000);
+    uint32_t TFT = TEST_FUNC_TWO(IN_STAT_COMP, pui32DataRx);
 
      raw_msg.data = TFT;
      pub_raw.publish(&raw_msg);
@@ -133,7 +133,7 @@ int main(void)
     while(1)
     {
 
-    uint32_t rslt = TEST_FUNC(IN_STAT_COMP,pui32DataRx);
+    uint32_t rslt = TEST_FUNC(IN_EN,pui32DataRx);
 
      raw_msg.data = rslt;
      pub_raw.publish(&raw_msg);

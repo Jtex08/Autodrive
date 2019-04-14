@@ -188,7 +188,7 @@ uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[])
 }
 
 
-/*
+
 /*Function Name: TEST_FUNC_TWO
 **Description: Test function to see if files can build, and if data can be returned
 */
