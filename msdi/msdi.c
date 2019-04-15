@@ -20,6 +20,10 @@
 #include "driverlib/ssi.h"
 #include "msdi.h"
 
+// ROS includes
+#include <ros.h>
+#include <std_msgs/UInt32.h>
+#include "rosserial_tivac_tutorials/Panel.h"
 
 /*
 **Private Functions

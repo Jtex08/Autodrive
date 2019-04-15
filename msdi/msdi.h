@@ -18,6 +18,12 @@
 #include <stdint.h>
 #include <stddef.h>
 
+// ROS includes
+#include <ros.h>
+#include <std_msgs/UInt32.h>
+#include "rosserial_tivac_tutorials/Panel.h"
+
+
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header

@@ -62,7 +62,7 @@ int main(void)
 
   //SSI_Init(&spiConfig);
 
-  MSDI_Init(SSI0,&pan_one,&left_msg);
+  MSDI_Init(SPI0,&pan_one,&left_msg);
 
       nh.getHardware()->delay(500);
     uint32_t TFT = TEST_FUNC_TWO(IN_STAT_COMP, pui32DataRx);
