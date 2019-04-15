@@ -177,6 +177,50 @@ static msdi_parity_t MSDI_PARITY(uint32_t raw_val)
 /*
 **Public Functions
 */
+/*Function Name: SSI_Init
+**Description: Setup the SSI for use with msdi
+**Parameters: Pointer to msdi spi configuration
+**            
+**Returns: Void
+*/
+
+void SSI_Init(msdi_spi_t* const spiConfig)
+{
+    //Enable Peripherals
+    SysCtlPeripheralEnable(spiConfig->ui32SysCtlSSI);
+    SysCtlPeripheralEnable(spiConfig->ui32SysCtlGPIO);
+
+    while(!SysCtlPeripheralReady(spiConfig->ui32SysCtlGPIO))
+    {
+    }
+
+    //Configure Pins for SPI
+    GPIOPinConfigure(spiConfig->ui32PinCLK);
+    GPIOPinConfigure(spiConfig->ui32PinRX);
+    GPIOPinConfigure(spiConfig->ui32PinTX);
+
+    /* Set pin types
+    **Direct Control used for CS to allow 32 bit transfers */
+    GPIOPinTypeGPIOOutput(spiConfig->ui32GPIOBase,spiConfig->ui32PinFSS);
+    GPIOPinTypeSSI(spiConfig->ui32GPIOBase, 
+                    spiConfig->ui32GPIOPinCLK | spiConfig->ui32GPIOPinRX | spiConfig->ui32GPIOPinTX);
+
+    SSIConfigSetExpClk(spiConfig->ui32SSIBASE, SysCtlClockGet(), SSI_FRF_MOTO_MODE_1,
+                       SSI_MODE_MASTER, 2000000, 16);
+    
+    //Enable SSI
+    SSIEnable(spiConfig->ui32SSIBASE);
+
+    //CS Set High
+    GPIOPinWrite(spiConfig->ui32GPIOBase, spiConfig->ui32PinFSS, spiConfig->ui32PinFSS);
+
+    while(!SysCtlPeripheralReady(spiConfig->ui32SysCtlGPIO))
+    {
+    }
+
+    return;
+
+}
 /*Function Name: TEST_FUNC
 **Description: Test function to see if files can build, and if data can be returned
 */

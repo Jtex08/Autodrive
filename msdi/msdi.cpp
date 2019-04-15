@@ -46,21 +46,31 @@ int main(void)
   char info[11] = "Left Panel";
   left_msg.panel_location.data = info;
 
+  msdpi_spi_t spiConfig;
+
+  spiConfig = {SYSCTL_PERIPH_SSI0, SYSCTL_PERIPH_GPIOA, SSI0_BASE, GPIO_PA2_SSI0CLK,
+                GPIO_PA4_SSI0RX, GPIO_PA5_SSI0TX, GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_2,
+                GPIO_PIN_4, GPIO_PIN_5};
+
+  
+
 
   //Begin SPI setup
 
-   SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
+  SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
                    SYSCTL_XTAL_16MHZ);
+
+  SSI_Init(&spiConfig);
     
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_SSI0);
+   // SysCtlPeripheralEnable(SYSCTL_PERIPH_SSI0);
 
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+  //  SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
 
-    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOA))
-    {
-    }
+  //  while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOA))
+    //{
+    //}
 
-    GPIOPinConfigure(GPIO_PA2_SSI0CLK);
+    /*GPIOPinConfigure(GPIO_PA2_SSI0CLK);
     //GPIOPinConfigure(GPIO_PA3_SSI0FSS);
     GPIOPinConfigure(GPIO_PA4_SSI0RX);
     GPIOPinConfigure(GPIO_PA5_SSI0TX);
@@ -87,6 +97,9 @@ int main(void)
     while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOA))
     {
     }
+    */
+   
+
 
     /*Read Function
     Take register you want to read

@@ -140,11 +140,50 @@ typedef enum
 #define MSDI_OI_MASK                          (0x00000002U)/*Other interrupt*/
 
 
+/*******************************************************************************
+ * Struct types definition
+ ******************************************************************************/
+
+/*!
+ * Struct with individual device configuration settings
+ */
+typedef struct
+{
+    uint32_t ui32SysCtlSSI;     /*  Peripheral Enable SSI      */
+    uint32_t ui32SysCtlGPIO;    /*  Peripheral Enable GPIO     */
+    uint32_t ui32SSIBASE;       /* Base module for SSI         */
+    /* GPIOPinConfigure Values */
+    uint32_t ui32PinCLK;        /* CLK pin to be used for SPI  */
+    uint32_t ui32PinRX;         /* RX pin to be used for SPI   */
+    uint32_t ui32PinTX;         /* TX pin to be used for SPI   */
+    /* GPIOPinType Value */
+    uint32_t ui32GPIOBase;      /* GPIO Port Base Value for SPI*/
+    uint32_t ui32PinFSS;        /* Used to set GPIO Pin type for CS  */
+    uint32_t ui32GPIOPinCLK;    /* Used to set GPIO Pin type for clock */
+    uint32_t ui32GPIOPinRX;     /* Used to set GPIO Pin type for RX */
+    uint32_t ui32GPIOPinTX;     /* Used to set GPIO Pin type for TX */
+    
+
+
+
+}msdi_spi_t;
+
+
 //*****************************************************************************
 //
 // Prototypes for the APIs.
 //
 //*****************************************************************************
+
+
+/*Function Name: SSI_Init
+**Description: Setup the SSI for use with msdi
+**Parameters: Pointer to msdi spi configuration
+**            
+**Returns: Void
+*/
+
+void SSI_Init(msdi_spi_t* const spiConfig);
 
 /*Function Name: TEST_FUNC
 **Description: Test function
