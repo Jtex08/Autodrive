@@ -69,7 +69,7 @@ int main(void)
  // left_msg.panel_location.data = pan_one->location;
 
       nh.getHardware()->delay(500);
-    uint32_t TFT = TEST_FUNC_TWO(IN_STAT_COMP, pui32DataRx);
+    uint32_t TFT = TEST_FUNC_TWO(DEVICE_ID, pui32DataRx);
 
      raw_msg.data = TFT;
      pub_raw.publish(&raw_msg);
