@@ -44,11 +44,11 @@ int main(void)
   uint32_t pui32DataRx[NUM_SSI_DATA];
 
  // char info[11] = "Left Panel";
-  left_msg.panel_location.data = info;
+ // left_msg.panel_location.data = info;
 
   msdi_var_t pan_one;
 
-  left_msg.panel_location.data = pan_one.location;
+
 
   /*spiConfig = {SYSCTL_PERIPH_SSI0, SYSCTL_PERIPH_GPIOA, SSI0_BASE, GPIO_PA2_SSI0CLK,
                 GPIO_PA4_SSI0RX, GPIO_PA5_SSI0TX, GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_2,
@@ -64,7 +64,9 @@ int main(void)
 
   //SSI_Init(&spiConfig);
 
-  MSDI_Init(SPI0,&pan_one,);
+  MSDI_Init(SPI0, &pan_one);
+
+  left_msg.panel_location.data = pan_one.location;
 
       nh.getHardware()->delay(500);
     uint32_t TFT = TEST_FUNC_TWO(IN_STAT_COMP, pui32DataRx);
