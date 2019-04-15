@@ -250,7 +250,7 @@ void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info)
 
  
 
-    msdi_info->reg_settings->blank_set = 0;
+    msdi_info->reg_settings.blank_set = 0;
 
     SSI_Init(&(msdi_info->spi_settings));
 }
