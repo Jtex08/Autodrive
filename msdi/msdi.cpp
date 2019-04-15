@@ -74,7 +74,7 @@ int main(void)
 
 
     //Config SSI Clock for SSIO with Polarity and Phase 0
-    SSIConfigSetExpClk(SSI0_BASE, SysCtlClockGet(), SSI_FRF_MOTO_MODE_0,
+    SSIConfigSetExpClk(SSI0_BASE, SysCtlClockGet(), SSI_FRF_MOTO_MODE_1,
                        SSI_MODE_MASTER, 2000000, 16);
 
     //
