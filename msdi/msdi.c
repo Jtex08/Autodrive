@@ -234,16 +234,32 @@ void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info)
 {
     if (choice == SPI_0)
     {
-        msdi_info->spi_settings = {SYSCTL_PERIPH_SSI0, SYSCTL_PERIPH_GPIOA, SSI0_BASE, GPIO_PA2_SSI0CLK,
-                GPIO_PA4_SSI0RX, GPIO_PA5_SSI0TX, GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_2,
-                GPIO_PIN_4, GPIO_PIN_5};
+        msdi_info->spi_settings.ui32SysCtlSSI = SYSCTL_PERIPH_SSI0;
+        msdi_info->spi_settings.ui32SysCtlGPIO = SYSCTL_PERIPH_GPIOA;
+        msdi_info->spi_settings.ui32SSIBASE = SSI0_BASE;
+        msdi_info->spi_settings.ui32PinCLK = GPIO_PA2_SSI0CLK;
+        msdi_info->spi_settings.ui32PinRX = GPIO_PA4_SSI0RX;
+        msdi_info->spi_settings.ui32PinTX = GPIO_PA5_SSI0TX;
+        msdi_info->spi_settings.ui32GPIOBase = GPIO_PORTA_BASE;
+        msdi_info->spi_settings.ui32PinFSS = GPIO_PIN_3;
+        msdi_info->spi_settings.ui32GPIOPinCLK = GPIO_PIN_2;
+        msdi_info->spi_settings.ui32GPIOPinRX = GPIO_PIN_4;
+        msdi_info->spi_settings.ui32GPIOPinTX = GPIO_PIN_5;
        // strcpy(msdi_info->location, "Left Panel";
     }
     else if (choice == SPI_1)
     {
-        msdi_info->spi_settings = {SYSCTL_PERIPH_SSI0, SYSCTL_PERIPH_GPIOA, SSI0_BASE, GPIO_PA2_SSI0CLK,
-                GPIO_PA4_SSI0RX, GPIO_PA5_SSI0TX, GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_2,
-                GPIO_PIN_4, GPIO_PIN_5};
+        msdi_info->spi_settings.ui32SysCtlSSI = SYSCTL_PERIPH_SSI0;
+        msdi_info->spi_settings.ui32SysCtlGPIO = SYSCTL_PERIPH_GPIOA;
+        msdi_info->spi_settings.ui32SSIBASE = SSI0_BASE;
+        msdi_info->spi_settings.ui32PinCLK = GPIO_PA2_SSI0CLK;
+        msdi_info->spi_settings.ui32PinRX = GPIO_PA4_SSI0RX;
+        msdi_info->spi_settings.ui32PinTX = GPIO_PA5_SSI0TX;
+        msdi_info->spi_settings.ui32GPIOBase = GPIO_PORTA_BASE;
+        msdi_info->spi_settings.ui32PinFSS = GPIO_PIN_3;
+        msdi_info->spi_settings.ui32GPIOPinCLK = GPIO_PIN_2;
+        msdi_info->spi_settings.ui32GPIOPinRX = GPIO_PIN_4;
+        msdi_info->spi_settings.ui32GPIOPinTX = GPIO_PIN_5;
         //strcpy(msdi_info.location, "Right Panel";
         
     }
