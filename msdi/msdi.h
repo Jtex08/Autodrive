@@ -18,10 +18,7 @@
 #include <stdint.h>
 #include <stddef.h>
 
-// ROS includes
-#include <ros.h>
-#include <std_msgs/UInt32.h>
-#include "rosserial_tivac_tutorials/Panel.h"
+
 
 
 //*****************************************************************************
@@ -209,7 +206,8 @@ typedef struct
 
     msdi_spi_t           spi_settings;    /*SPI setting for specific MSDI */
     msdi_reg_set_t       reg_settings;    /*Register setting for specific MSDI */
-    Panel                *panel_info;     /*Pointer to ROS panel info for specific MSDI */ 
+    char                 location[];      /*Panel location */ 
+
 
 
 }msdi_var_t;
@@ -241,7 +239,7 @@ void SSI_Init(msdi_spi_t* const spiConfig);
 **            
 **Returns: Void
 */
-void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info, Panel* panel);
+void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info);
 
 /*Function Name: TEST_FUNC
 **Description: Test function
