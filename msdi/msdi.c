@@ -237,14 +237,15 @@ void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info)
         msdi_info->spi_settings = {SYSCTL_PERIPH_SSI0, SYSCTL_PERIPH_GPIOA, SSI0_BASE, GPIO_PA2_SSI0CLK,
                 GPIO_PA4_SSI0RX, GPIO_PA5_SSI0TX, GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_2,
                 GPIO_PIN_4, GPIO_PIN_5};
-        msdi_info->location = "Left Panel";
+        strcpy(msdi_info->location, "Left Panel";
     }
     else if (choice == SPI_1)
     {
         msdi_info->spi_settings = {SYSCTL_PERIPH_SSI0, SYSCTL_PERIPH_GPIOA, SSI0_BASE, GPIO_PA2_SSI0CLK,
                 GPIO_PA4_SSI0RX, GPIO_PA5_SSI0TX, GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_2,
                 GPIO_PIN_4, GPIO_PIN_5};
-        msdi_info->location = "Right Panel";
+        strcpy(msdi_info.location, "Right Panel";
+        
     }
 
  
