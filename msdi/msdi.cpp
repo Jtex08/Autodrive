@@ -66,7 +66,7 @@ int main(void)
 
   MSDI_Init(SPI_0, &pan_one);
 
-  left_msg.panel_location.data = pan_one->location;
+ // left_msg.panel_location.data = pan_one->location;
 
       nh.getHardware()->delay(500);
     uint32_t TFT = TEST_FUNC_TWO(IN_STAT_COMP, pui32DataRx);

@@ -206,7 +206,7 @@ typedef struct
     
     msdi_spi_t           spi_settings;    /*SPI setting for specific MSDI */
     msdi_reg_set_t       reg_settings;    /*Register setting for specific MSDI */
-    char                 location;      /*Panel location */ 
+   // char                 location;      /*Panel location */ 
 
 
 
