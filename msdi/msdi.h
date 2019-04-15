@@ -49,6 +49,16 @@ typedef enum
     SET_PARITY_BIT                    = 1U 
 } msdi_parity_t;
 
+/*
+**SPI selection code
+*/
+typedef enum
+{
+    SPI0                              = 0U,
+    SPI1                              = 1U 
+} msdi_spi_choice_t;
+
+
 
 
 //*****************************************************************************
@@ -139,13 +149,17 @@ typedef enum
 #define MSDI_TEMP_MASK                        (0x00000004U)/*Temperature event mask*/
 #define MSDI_OI_MASK                          (0x00000002U)/*Other interrupt*/
 
+/*******************************************************************************
+ *SPI choices definitions
+ ******************************************************************************/
+#define SPI0                        
 
 /*******************************************************************************
  * Struct types definition
  ******************************************************************************/
 
 /*!
- * Struct with individual device configuration settings
+ * Struct with individual spi device configuration settings
  */
 typedef struct
 {
@@ -168,6 +182,33 @@ typedef struct
 
 }msdi_spi_t;
 
+/*!
+ * Struct with individual spi device configuration settings
+ */
+typedef struct
+{
+    uint32_t blank_set;     /*  Blank for test    */
+    
+    
+
+
+
+}msdi_reg_set_t;
+
+/*!
+ * Struct for individual MSDI
+ */
+typedef struct
+{
+
+    msdi_spi_t           spi_settings;    /*SPI setting for specific MSDI */
+    msdi_reg_set_t       reg_settings;    /*Register setting for specific MSDI */
+    Panel                *panel_info;     /*Pointer to ROS panel info for specific MSDI */ 
+
+
+}msdi_var_t;
+
+
 
 //*****************************************************************************
 //
@@ -184,6 +225,17 @@ typedef struct
 */
 
 void SSI_Init(msdi_spi_t* const spiConfig);
+
+
+/*Function Name: MSDI_Init
+**Description: Setup MSDI SPI, Register Settings, Panel struct info goes into
+**Parameters: choice is a value to determine which SPI is being used
+**            msdi_info is a pointer to msdi instance
+**            panel is a pointer to ROS message for MSDI
+**            
+**Returns: Void
+*/
+void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info, Panel* panel);
 
 /*Function Name: TEST_FUNC
 **Description: Test function

@@ -221,6 +221,40 @@ void SSI_Init(msdi_spi_t* const spiConfig)
     return;
 
 }
+
+/*Function Name: MSDI_Init
+**Description: Setup MSDI SPI, Register Settings, Panel struct info goes into
+**Parameters: choice is a value to determine which SPI is being used
+**            msdi_info is a pointer to msdi instance
+**            panel is a pointer to ROS message for MSDI
+**            
+**Returns: Void
+*/
+void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info, Panel* panel)
+{
+    if (choice == SPI0)
+    {
+        msdi_info->spi_settings = {SYSCTL_PERIPH_SSI0, SYSCTL_PERIPH_GPIOA, SSI0_BASE, GPIO_PA2_SSI0CLK,
+                GPIO_PA4_SSI0RX, GPIO_PA5_SSI0TX, GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_2,
+                GPIO_PIN_4, GPIO_PIN_5};
+    }
+    else if (choice == SPI1)
+    {
+        msdi_info->spi_settings = {SYSCTL_PERIPH_SSI0, SYSCTL_PERIPH_GPIOA, SSI0_BASE, GPIO_PA2_SSI0CLK,
+                GPIO_PA4_SSI0RX, GPIO_PA5_SSI0TX, GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_2,
+                GPIO_PIN_4, GPIO_PIN_5};
+    }
+
+    msdi_info->Panel = panel;
+
+    msdi_info.reg_settings = 0;
+
+    SSI_Init(&(msdi_info->spi_settings));
+}
+
+
+
+
 /*Function Name: TEST_FUNC
 **Description: Test function to see if files can build, and if data can be returned
 */
