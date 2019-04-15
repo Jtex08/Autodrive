@@ -64,7 +64,7 @@ int main(void)
 
   //SSI_Init(&spiConfig);
 
-  MSDI_Init(SPI0, &pan_one);
+  MSDI_Init(SPI_0, &pan_one);
 
   left_msg.panel_location.data = pan_one.location;
 

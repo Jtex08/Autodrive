@@ -57,8 +57,8 @@ typedef enum
 */
 typedef enum
 {
-    SPI0                              = 0U,
-    SPI1                              = 1U 
+    SPI_0                             = 0U,
+    SPI_1                             = 1U 
 } msdi_spi_choice_t;
 
 
