@@ -46,7 +46,7 @@ int main(void)
   char info[11] = "Left Panel";
   left_msg.panel_location.data = info;
 
-  msdpi_spi_t spiConfig;
+  msdi_spi_t spiConfig;
 
   spiConfig = {SYSCTL_PERIPH_SSI0, SYSCTL_PERIPH_GPIOA, SSI0_BASE, GPIO_PA2_SSI0CLK,
                 GPIO_PA4_SSI0RX, GPIO_PA5_SSI0TX, GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_2,
