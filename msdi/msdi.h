@@ -115,7 +115,7 @@ typedef enum
 #define THRESMAP_CFG1           0x2F000000  // ADC Threshold Mapping Register
 #define THRESMAP_CFG2           0x30000000  // ADC Threshold Mapping Register
 #define Matrix                  0x31000000  // Matrix Setting Register
-#define Mode                    0x32000000  // Mode Setting Register
+#define MODE                    0x32000000  // Mode Setting Register
 
 //*****************************************************************************
 //
@@ -250,11 +250,11 @@ void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info);
 uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[]);
 
 /*Function Name: TEST_FUNC_TWO
-**Description: Test function
-**Parameters: ui32Register = register name
+**Description: Test function send registier values to set up msdi
+**Parameters: 
 **            ui32DataRX = pointer to storing value
 **Returns: Will change according to need*/
-uint32_t TEST_FUNC_TWO(uint32_t ui32Register,uint32_t pui32DataRx[]);
+uint32_t TEST_FUNC_TWO(uint32_t pui32DataRx[]);
 
 
 //*****************************************************************************
