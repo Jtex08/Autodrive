@@ -241,6 +241,14 @@ void SSI_Init(msdi_spi_t* const spiConfig);
 */
 void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info);
 
+/*Function Name: MSDI_READ
+**Description: Test function
+**Parameters: ui32Register = register name
+**            ui32DataRX = pointer to storing value
+**Returns: Will change according to need
+*/
+uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[]);
+
 /*Function Name: TEST_FUNC
 **Description: Test function
 **Parameters: ui32Register = register name

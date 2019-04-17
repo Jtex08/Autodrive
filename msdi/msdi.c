@@ -123,10 +123,10 @@ static void MSDI_WRITE(uint32_t ui32Register,uint32_t ui32Setting, uint32_t pui3
     
 }
 
-/*Function Name: MSDI_WRITE
+/*Function Name: MSDI_READ
 **Description: Prepares data to be sent to write to a register
 */
-static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[])//changed from void to uin32_t for testing//
+uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[])//changed from void to uin32_t for testing//
 {
     uint32_t ui32DataTx[NUM_SSI_DATA];
    // uint32_t pui32DataRx[NUM_SSI_DATA];
