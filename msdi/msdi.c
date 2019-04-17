@@ -41,7 +41,7 @@ static void MSDI_DATA_TRANSFER(
 **          Register name data is to be written to
 **          Register setting 
 */
-static void MSDI_WRITE(uint32_t ui32Register,uint32_t uiSetting,uint32_t pui32DataRx[]);
+//static void MSDI_WRITE(uint32_t ui32Register,uint32_t uiSetting,uint32_t pui32DataRx[]);
 
 /*Function: MSDI_READ
 **Reads data from register
