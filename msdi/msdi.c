@@ -177,6 +177,103 @@ static msdi_parity_t MSDI_PARITY(uint32_t raw_val)
 /*
 **Public Functions
 */
+/*Function Name: SSI_Init
+**Description: Setup the SSI for use with msdi
+**Parameters: Pointer to msdi spi configuration
+**            
+**Returns: Void
+*/
+
+void SSI_Init(msdi_spi_t* const spiConfig)
+{
+    //Enable Peripherals
+    SysCtlPeripheralEnable(spiConfig->ui32SysCtlSSI);
+    SysCtlPeripheralEnable(spiConfig->ui32SysCtlGPIO);
+
+    while(!SysCtlPeripheralReady(spiConfig->ui32SysCtlGPIO))
+    {
+    }
+
+    //Configure Pins for SPI
+    GPIOPinConfigure(spiConfig->ui32PinCLK);
+    GPIOPinConfigure(spiConfig->ui32PinRX);
+    GPIOPinConfigure(spiConfig->ui32PinTX);
+
+    /* Set pin types
+    **Direct Control used for CS to allow 32 bit transfers */
+    GPIOPinTypeGPIOOutput(spiConfig->ui32GPIOBase,spiConfig->ui32PinFSS);
+    GPIOPinTypeSSI(spiConfig->ui32GPIOBase, 
+                    spiConfig->ui32GPIOPinCLK | spiConfig->ui32GPIOPinRX | spiConfig->ui32GPIOPinTX);
+
+    SSIConfigSetExpClk(spiConfig->ui32SSIBASE, SysCtlClockGet(), SSI_FRF_MOTO_MODE_1,
+                       SSI_MODE_MASTER, 2000000, 16);
+    
+    //Enable SSI
+    SSIEnable(spiConfig->ui32SSIBASE);
+
+    //CS Set High
+    GPIOPinWrite(spiConfig->ui32GPIOBase, spiConfig->ui32PinFSS, spiConfig->ui32PinFSS);
+
+    while(!SysCtlPeripheralReady(spiConfig->ui32SysCtlGPIO))
+    {
+    }
+
+    return;
+
+}
+
+/*Function Name: MSDI_Init
+**Description: Setup MSDI SPI, Register Settings, Panel struct info goes into
+**Parameters: choice is a value to determine which SPI is being used
+**            msdi_info is a pointer to msdi instance
+**            panel is a pointer to ROS message for MSDI
+**            
+**Returns: Void
+*/
+void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info)
+{
+    if (choice == SPI_0)
+    {
+        msdi_info->spi_settings.ui32SysCtlSSI = SYSCTL_PERIPH_SSI0;
+        msdi_info->spi_settings.ui32SysCtlGPIO = SYSCTL_PERIPH_GPIOA;
+        msdi_info->spi_settings.ui32SSIBASE = SSI0_BASE;
+        msdi_info->spi_settings.ui32PinCLK = GPIO_PA2_SSI0CLK;
+        msdi_info->spi_settings.ui32PinRX = GPIO_PA4_SSI0RX;
+        msdi_info->spi_settings.ui32PinTX = GPIO_PA5_SSI0TX;
+        msdi_info->spi_settings.ui32GPIOBase = GPIO_PORTA_BASE;
+        msdi_info->spi_settings.ui32PinFSS = GPIO_PIN_3;
+        msdi_info->spi_settings.ui32GPIOPinCLK = GPIO_PIN_2;
+        msdi_info->spi_settings.ui32GPIOPinRX = GPIO_PIN_4;
+        msdi_info->spi_settings.ui32GPIOPinTX = GPIO_PIN_5;
+       // strcpy(msdi_info->location, "Left Panel";
+    }
+    else if (choice == SPI_1)
+    {
+        msdi_info->spi_settings.ui32SysCtlSSI = SYSCTL_PERIPH_SSI0;
+        msdi_info->spi_settings.ui32SysCtlGPIO = SYSCTL_PERIPH_GPIOA;
+        msdi_info->spi_settings.ui32SSIBASE = SSI0_BASE;
+        msdi_info->spi_settings.ui32PinCLK = GPIO_PA2_SSI0CLK;
+        msdi_info->spi_settings.ui32PinRX = GPIO_PA4_SSI0RX;
+        msdi_info->spi_settings.ui32PinTX = GPIO_PA5_SSI0TX;
+        msdi_info->spi_settings.ui32GPIOBase = GPIO_PORTA_BASE;
+        msdi_info->spi_settings.ui32PinFSS = GPIO_PIN_3;
+        msdi_info->spi_settings.ui32GPIOPinCLK = GPIO_PIN_2;
+        msdi_info->spi_settings.ui32GPIOPinRX = GPIO_PIN_4;
+        msdi_info->spi_settings.ui32GPIOPinTX = GPIO_PIN_5;
+        //strcpy(msdi_info.location, "Right Panel";
+        
+    }
+
+ 
+
+    msdi_info->reg_settings.blank_set = 0;
+
+    SSI_Init(&(msdi_info->spi_settings));
+}
+
+
+
+
 /*Function Name: TEST_FUNC
 **Description: Test function to see if files can build, and if data can be returned
 */

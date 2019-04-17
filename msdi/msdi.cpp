@@ -43,66 +43,33 @@ int main(void)
 //  uint32_t ui32Index;
   uint32_t pui32DataRx[NUM_SSI_DATA];
 
-  char info[11] = "Left Panel";
-  left_msg.panel_location.data = info;
+ // char info[11] = "Left Panel";
+ // left_msg.panel_location.data = info;
+
+  msdi_var_t pan_one;
+
+
+
+  /*spiConfig = {SYSCTL_PERIPH_SSI0, SYSCTL_PERIPH_GPIOA, SSI0_BASE, GPIO_PA2_SSI0CLK,
+                GPIO_PA4_SSI0RX, GPIO_PA5_SSI0TX, GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_2,
+                GPIO_PIN_4, GPIO_PIN_5}; */
+
+  
 
 
   //Begin SPI setup
 
-   SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
+  SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
                    SYSCTL_XTAL_16MHZ);
-    
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_SSI0);
 
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+  //SSI_Init(&spiConfig);
 
-    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOA))
-    {
-    }
+  MSDI_Init(SPI_0, &pan_one);
 
-    GPIOPinConfigure(GPIO_PA2_SSI0CLK);
-    //GPIOPinConfigure(GPIO_PA3_SSI0FSS);
-    GPIOPinConfigure(GPIO_PA4_SSI0RX);
-    GPIOPinConfigure(GPIO_PA5_SSI0TX);
+ // left_msg.panel_location.data = pan_one->location;
 
-    //If SSI0FSS fails to work switch to direct control
-    GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE,GPIO_PIN_3);
-
-    //Set GPIO Pin type to SSI
-
-    GPIOPinTypeSSI(GPIO_PORTA_BASE, GPIO_PIN_5 | GPIO_PIN_4 | GPIO_PIN_2);
-
-
-    //Config SSI Clock for SSIO with Polarity 0 and Phase 1
-    SSIConfigSetExpClk(SSI0_BASE, SysCtlClockGet(), SSI_FRF_MOTO_MODE_1,
-                       SSI_MODE_MASTER, 2000000, 16);
-
-    //
-    // Enable the SSI0 module.
-    //
-    SSIEnable(SSI0_BASE);
-    
-    GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_3);
-    
-    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOA))
-    {
-    }
-
-    /*Read Function
-    Take register you want to read
-    Shift left one
-    Do parity check and set if needed
-    Split data into two 16 bit words
-    Transmit both words
-
-    Get data in two 16 bit words
-
-    Shift MSBs left 8 bits then or with LSBs for full 32 bit value.*/
-
-  //  uint32_t reg_val;
-  //  uint32_t rec_val;
-    nh.getHardware()->delay(500);
-    uint32_t TFT = TEST_FUNC_TWO(IN_STAT_COMP, pui32DataRx);
+      nh.getHardware()->delay(500);
+    uint32_t TFT = TEST_FUNC_TWO(IN_EN, pui32DataRx);
 
      raw_msg.data = TFT;
      pub_raw.publish(&raw_msg);
@@ -133,7 +100,7 @@ int main(void)
     while(1)
     {
 
-    uint32_t rslt = TEST_FUNC(IN_EN,pui32DataRx);
+    uint32_t rslt = TEST_FUNC(DEVICE_ID,pui32DataRx);
 
      raw_msg.data = rslt;
      pub_raw.publish(&raw_msg);

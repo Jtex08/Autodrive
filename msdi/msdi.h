@@ -18,6 +18,9 @@
 #include <stdint.h>
 #include <stddef.h>
 
+
+
+
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header
@@ -48,6 +51,16 @@ typedef enum
     LEAVE_PARITY_BIT                  = 0U,
     SET_PARITY_BIT                    = 1U 
 } msdi_parity_t;
+
+/*
+**SPI selection code
+*/
+typedef enum
+{
+    SPI_0                             = 0U,
+    SPI_1                             = 1U 
+} msdi_spi_choice_t;
+
 
 
 
@@ -139,12 +152,94 @@ typedef enum
 #define MSDI_TEMP_MASK                        (0x00000004U)/*Temperature event mask*/
 #define MSDI_OI_MASK                          (0x00000002U)/*Other interrupt*/
 
+/*******************************************************************************
+ *SPI choices definitions
+ ******************************************************************************/
+#define SPI0                        
+
+/*******************************************************************************
+ * Struct types definition
+ ******************************************************************************/
+
+/*!
+ * Struct with individual spi device configuration settings
+ */
+typedef struct
+{
+    uint32_t ui32SysCtlSSI;     /*  Peripheral Enable SSI      */
+    uint32_t ui32SysCtlGPIO;    /*  Peripheral Enable GPIO     */
+    uint32_t ui32SSIBASE;       /* Base module for SSI         */
+    /* GPIOPinConfigure Values */
+    uint32_t ui32PinCLK;        /* CLK pin to be used for SPI  */
+    uint32_t ui32PinRX;         /* RX pin to be used for SPI   */
+    uint32_t ui32PinTX;         /* TX pin to be used for SPI   */
+    /* GPIOPinType Value */
+    uint32_t ui32GPIOBase;      /* GPIO Port Base Value for SPI*/
+    uint32_t ui32PinFSS;        /* Used to set GPIO Pin type for CS  */
+    uint32_t ui32GPIOPinCLK;    /* Used to set GPIO Pin type for clock */
+    uint32_t ui32GPIOPinRX;     /* Used to set GPIO Pin type for RX */
+    uint32_t ui32GPIOPinTX;     /* Used to set GPIO Pin type for TX */
+    
+
+
+
+}msdi_spi_t;
+
+/*!
+ * Struct with individual spi device configuration settings
+ */
+typedef struct
+{
+    uint32_t blank_set;     /*  Blank for test    */
+    
+    
+
+
+
+}msdi_reg_set_t;
+
+/*!
+ * Struct for individual MSDI
+ */
+typedef struct
+{
+    
+    msdi_spi_t           spi_settings;    /*SPI setting for specific MSDI */
+    msdi_reg_set_t       reg_settings;    /*Register setting for specific MSDI */
+   // char                 location;      /*Panel location */ 
+
+
+
+}msdi_var_t;
+
+
 
 //*****************************************************************************
 //
 // Prototypes for the APIs.
 //
 //*****************************************************************************
+
+
+/*Function Name: SSI_Init
+**Description: Setup the SSI for use with msdi
+**Parameters: Pointer to msdi spi configuration
+**            
+**Returns: Void
+*/
+
+void SSI_Init(msdi_spi_t* const spiConfig);
+
+
+/*Function Name: MSDI_Init
+**Description: Setup MSDI SPI, Register Settings, Panel struct info goes into
+**Parameters: choice is a value to determine which SPI is being used
+**            msdi_info is a pointer to msdi instance
+**            panel is a pointer to ROS message for MSDI
+**            
+**Returns: Void
+*/
+void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info);
 
 /*Function Name: TEST_FUNC
 **Description: Test function
