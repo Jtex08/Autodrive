@@ -99,8 +99,9 @@ int main(void)
 
     while(1)
     {
+    uint32_t rslt = MSDI_READ(IN_STAT_COMP, pui32DataRx);
 
-    uint32_t rslt = TEST_FUNC(IN_STAT_COMP,pui32DataRx);
+    //uint32_t rslt = TEST_FUNC(IN_STAT_COMP,pui32DataRx);
 
      raw_msg.data = rslt;
      pub_raw.publish(&raw_msg);
@@ -128,7 +129,33 @@ int main(void)
      nh.getHardware()->delay(500);
 
 
-     rslt = TEST_FUNC(IN_STAT_ADC1,pui32DataRx);
+     rslt = MSDI_READ(IN_STAT_ADC1,pui32DataRx);
+
+     raw_msg.data = rslt;
+     pub_raw.publish(&raw_msg);
+
+     nh.spinOnce();
+     
+     // Delay for a bit.
+     nh.getHardware()->delay(500);
+
+     raw_msg.data = pui32DataRx[0];
+     pub_raw.publish(&raw_msg);
+
+     nh.spinOnce();
+     
+     // Delay for a bit.
+     nh.getHardware()->delay(500);
+
+     
+     raw_msg.data = pui32DataRx[1];
+     pub_raw.publish(&raw_msg);
+
+     nh.spinOnce();
+     
+     // Delay for a bit.
+     nh.getHardware()->delay(500);
+          rslt = MSDI_READ(DEVICE_ID,pui32DataRx);
 
      raw_msg.data = rslt;
      pub_raw.publish(&raw_msg);

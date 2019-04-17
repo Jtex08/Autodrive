@@ -292,13 +292,13 @@ uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[])
 uint32_t TEST_FUNC_TWO(uint32_t pui32DataRx[])
 {
    // uint32_t enable = 0x00F0000F;
-    MSDI_WRITE(IN_EN, 0x00F8003E, pui32DataRx);
+    MSDI_WRITE(IN_EN, 0x00F8001F, pui32DataRx);
 
     //uint32_t cfig = 0x00000800;
 
     MSDI_WRITE(CS_SELECT, 0x0000001F, pui32DataRx);
 
-    MSDI_WRITE(MODE, 0xF80000, pui32DataRx);
+    MSDI_WRITE(MODE, 0x00F80000, pui32DataRx);
 
     MSDI_WRITE(THRES_CFG0, 0x000000AA, pui32DataRx);
 
