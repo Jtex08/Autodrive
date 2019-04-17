@@ -41,7 +41,7 @@ static void MSDI_DATA_TRANSFER(
 **          Register name data is to be written to
 **          Register setting 
 */
-//static void MSDI_WRITE(uint32_t ui32Register,uint32_t uiSetting,uint32_t pui32DataRx[]);
+static void MSDI_WRITE(uint32_t ui32Register,uint32_t uiSetting,uint32_t pui32DataRx[]);
 
 /*Function: MSDI_READ
 **Reads data from register
@@ -49,7 +49,7 @@ static void MSDI_DATA_TRANSFER(
 **          ui32Register: Register name data is to be read from
 **          ui32DataRx: Pointer to data received storage
 */
-static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[]);
+//static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[]);
 
 /*Function Name: MSDI_PARITY
 **Description: Checks raw data for odd parity
