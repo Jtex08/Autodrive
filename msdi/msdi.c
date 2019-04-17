@@ -232,7 +232,7 @@ void SSI_Init(msdi_spi_t* const spiConfig)
 */
 void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info)
 {
-    if (choice == SPI_0)
+    if (choice == SPI_0
     {
         msdi_info->spi_settings.ui32SysCtlSSI = SYSCTL_PERIPH_SSI0;
         msdi_info->spi_settings.ui32SysCtlGPIO = SYSCTL_PERIPH_GPIOA;
