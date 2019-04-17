@@ -99,7 +99,7 @@ int main(void)
 
     while(1)
     {
-    uint32_t rslt = MSDI_READ(IN_STAT_COMP, pui32DataRx);
+    uint32_t rslt = MSDI_READ(IN_EN, pui32DataRx);
 
     //uint32_t rslt = TEST_FUNC(IN_STAT_COMP,pui32DataRx);
 
@@ -129,7 +129,7 @@ int main(void)
      nh.getHardware()->delay(500);
 
 
-     rslt = MSDI_READ(IN_STAT_ADC1,pui32DataRx);
+     rslt = MSDI_READ(CONFIG,pui32DataRx);
 
      raw_msg.data = rslt;
      pub_raw.publish(&raw_msg);
