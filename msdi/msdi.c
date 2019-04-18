@@ -20,7 +20,6 @@
 #include "driverlib/ssi.h"
 #include "msdi.h"
 
-
 /*
 **Private Functions
 */
@@ -57,8 +56,6 @@ static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[]);
 **Returns: 0 if parity bit doesn't need to be set, 1 if parity bit needs to be set
 */
 static msdi_parity_t MSDI_PARITY(uint32_t raw_val);
-
-
 
 /*
 **Private Functions Code
@@ -138,9 +135,7 @@ static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[])//changed
     if (status == SET_PARITY_BIT)
     {
         raw_val = raw_val | SET_PARITY_BIT_MASK;
-
     }
-
     ui32DataTx[0] = raw_val>>16;
     ui32DataTx[1] = raw_val & LOWER_TRANSFER_MASK;
 
@@ -149,7 +144,6 @@ static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[])//changed
     return raw_val;
     
 }
-
 
 /*Function Name: MSDI_PARITY
 **Description: Checks raw data to see if the parity bit needs to be set
@@ -173,7 +167,6 @@ static msdi_parity_t MSDI_PARITY(uint32_t raw_val)
 
 }
 
-
 /*
 **Public Functions
 */
@@ -193,7 +186,6 @@ void SSI_Init(msdi_spi_t* const spiConfig)
     while(!SysCtlPeripheralReady(spiConfig->ui32SysCtlGPIO))
     {
     }
-
     //Configure Pins for SPI
     GPIOPinConfigure(spiConfig->ui32PinCLK);
     GPIOPinConfigure(spiConfig->ui32PinRX);
@@ -260,18 +252,12 @@ void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info)
         msdi_info->spi_settings.ui32GPIOPinCLK = GPIO_PIN_2;
         msdi_info->spi_settings.ui32GPIOPinRX = GPIO_PIN_4;
         msdi_info->spi_settings.ui32GPIOPinTX = GPIO_PIN_5;
-        //strcpy(msdi_info.location, "Right Panel";
-        
+        //strcpy(msdi_info.location, "Right Panel"; 
     }
-
- 
-
     msdi_info->reg_settings.blank_set = 0;
 
     SSI_Init(&(msdi_info->spi_settings));
 }
-
-
 
 
 /*Function Name: TEST_FUNC
@@ -283,8 +269,6 @@ uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[])
 
     return rslt;
 }
-
-
 
 /*Function Name: TEST_FUNC_TWO
 **Description: Test function to see if files can build, and if data can be returned
