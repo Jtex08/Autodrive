@@ -18,9 +18,6 @@
 #include <stdint.h>
 #include <stddef.h>
 
-
-
-
 //*****************************************************************************
 //
 // If building with a C++ compiler, make all of the definitions in this header
@@ -42,9 +39,8 @@ typedef enum
     MSDI_STATUS_COMM_ERROR       = 2U     /*!< Error in communication. */
 } msdi_status_t;
 
-
 /*
-**Parity code
+*Parity code
 */
 typedef enum
 {
@@ -60,9 +56,6 @@ typedef enum
     SPI_0                             = 0U,
     SPI_1                             = 1U 
 } msdi_spi_choice_t;
-
-
-
 
 //*****************************************************************************
 //
@@ -143,7 +136,7 @@ typedef enum
 /*******************************************************************************
  *Fault status register
  ******************************************************************************/
-
+    
 #define MSDI_POR_STAT_MASK                    (0x00000080U)/*Power on reset mask*/
 #define MSDI_SPI_FAIL_MASK                    (0x00000040U)/*SPI Comm fail*/
 #define MSDI_PRTY_FAIL_MASK                   (0x00000020U)/*Parity fail mask*/
@@ -179,9 +172,6 @@ typedef struct
     uint32_t ui32GPIOPinCLK;    /* Used to set GPIO Pin type for clock */
     uint32_t ui32GPIOPinRX;     /* Used to set GPIO Pin type for RX */
     uint32_t ui32GPIOPinTX;     /* Used to set GPIO Pin type for TX */
-    
-
-
 
 }msdi_spi_t;
 
@@ -191,10 +181,6 @@ typedef struct
 typedef struct
 {
     uint32_t blank_set;     /*  Blank for test    */
-    
-    
-
-
 
 }msdi_reg_set_t;
 
@@ -207,19 +193,14 @@ typedef struct
     msdi_spi_t           spi_settings;    /*SPI setting for specific MSDI */
     msdi_reg_set_t       reg_settings;    /*Register setting for specific MSDI */
    // char                 location;      /*Panel location */ 
-
-
-
+    
 }msdi_var_t;
-
-
 
 //*****************************************************************************
 //
 // Prototypes for the APIs.
 //
 //*****************************************************************************
-
 
 /*Function Name: SSI_Init
 **Description: Setup the SSI for use with msdi
@@ -229,8 +210,6 @@ typedef struct
 */
 
 void SSI_Init(msdi_spi_t* const spiConfig);
-
-
 /*Function Name: MSDI_Init
 **Description: Setup MSDI SPI, Register Settings, Panel struct info goes into
 **Parameters: choice is a value to determine which SPI is being used
@@ -255,7 +234,6 @@ uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[]);
 **            ui32DataRX = pointer to storing value
 **Returns: Will change according to need*/
 uint32_t TEST_FUNC_TWO(uint32_t ui32Register,uint32_t pui32DataRx[]);
-
 
 //*****************************************************************************
 //
