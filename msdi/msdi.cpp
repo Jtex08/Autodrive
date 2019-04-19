@@ -155,8 +155,8 @@ int main(void)
      
      // Delay for a bit.
      nh.getHardware()->delay(500);
-     /*
-          rslt = MSDI_READ(ANA_STAT0,pui32DataRx);
+     
+    rslt = MSDI_READ(ANA_STAT0,pui32DataRx);
 
      raw_msg.data = rslt;
      pub_raw.publish(&raw_msg);
@@ -179,7 +179,7 @@ int main(void)
      pub_raw.publish(&raw_msg);
 
      nh.spinOnce();
-     */
+     
      // Delay for a bit.
      nh.getHardware()->delay(500);
      raw_msg.data = 0x00000000;
