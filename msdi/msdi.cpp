@@ -129,7 +129,7 @@ int main(void)
      nh.getHardware()->delay(500);
 
 
-     rslt = MSDI_READ(IN_STAT,pui32DataRx);
+     rslt = MSDI_READ(INT_STAT,pui32DataRx);
 
      raw_msg.data = rslt;
      pub_raw.publish(&raw_msg);
