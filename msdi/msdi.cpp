@@ -112,19 +112,10 @@ int main(void)
 
     while(1)
     {
-    uint32_t rslt = MSDI_READ(IN_STAT_COMP, pui32DataRx);
+    
+      MSDI_GET_BUTTON_STATUS(&pan_one);
 
-    //uint32_t rslt = TEST_FUNC(IN_STAT_COMP,pui32DataRx);
-
-     raw_msg.data = rslt;
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-
-     raw_msg.data = pui32DataRx[0];
+     raw_msg.data = pan_one.button_data;
      pub_raw.publish(&raw_msg);
 
      nh.spinOnce();
@@ -133,76 +124,6 @@ int main(void)
      nh.getHardware()->delay(500);
 
      
-     raw_msg.data = pui32DataRx[1];
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-
-
-     rslt = MSDI_READ(INT_STAT,pui32DataRx);
-
-     raw_msg.data = rslt;
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-
-     raw_msg.data = pui32DataRx[0];
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-
-     
-     raw_msg.data = pui32DataRx[1];
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-     
-    rslt = MSDI_READ(CONFIG,pui32DataRx);
-
-     raw_msg.data = rslt;
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-
-     raw_msg.data = pui32DataRx[0];
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-
-     
-     raw_msg.data = pui32DataRx[1];
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-     raw_msg.data = 0x00000000;
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-
 
 
      
