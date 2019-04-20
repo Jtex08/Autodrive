@@ -36,6 +36,17 @@ int main(void)
 
   // ROS nodehandle initialization and topic registration
   nh.initNode();
+
+  /* Wait for connection to establish:  Added for testing to ease connection process
+  Untested as of 4202019
+
+  while (!nh.connected())
+  {
+    nh.spinOnce();
+    nh.getHardware()->delay(10);
+  }
+
+*/
   nh.advertise(pub_raw);
   nh.advertise(lpanel);
 
@@ -47,6 +58,8 @@ int main(void)
  // left_msg.panel_location.data = info;
 
   msdi_var_t pan_one;
+
+  pan_one.device = MSDI0;
 
 
 
@@ -64,10 +77,10 @@ int main(void)
 
   //SSI_Init(&spiConfig);
 
-  MSDI_Init(SPI_0, &pan_one);
+  MSDI_Init(&pan_one);
 
  // left_msg.panel_location.data = pan_one->location;
-
+/*
       nh.getHardware()->delay(500);
     uint32_t TFT = TEST_FUNC_TWO(pui32DataRx);
 
@@ -95,7 +108,7 @@ int main(void)
      
      // Delay for a bit.
      nh.getHardware()->delay(500);
-
+*/
 
     while(1)
     {
