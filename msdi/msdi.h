@@ -38,8 +38,8 @@ extern "C"
 typedef enum
 {
     MSDI_STATUS_SUCCESS          = 0U,    /*!< No error. */
-    MSDI_STATUS_SPI_INIT         = 1U,    /*!< SPI initialization failure. */
-    MSDI_STATUS_COMM_ERROR       = 2U     /*!< Error in communication. */
+    MSDI_STATUS_SPI_FAIL         = 1U,    /*!< SPI initialization failure. */
+    MSDI_STATUS_POR              = 2U     /*!< Power ON Reset. Reinitialize. */
 } msdi_status_t;
 
 
