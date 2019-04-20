@@ -146,7 +146,7 @@ static void MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[])//changed fro
 
     MSDI_DATA_TRANSFER(ui32DataTx,pui32DataRx);//possible issue with pui32DataRx
 
-    return raw_val;
+    return;
     
 }
 
@@ -170,6 +170,8 @@ static msdi_parity_t MSDI_PARITY(uint32_t raw_val)
     {
         return SET_PARITY_BIT;
     }   
+
+    return LEAVE_PARITY_BIT;
 
 }
 
@@ -246,7 +248,7 @@ void MSDI_Init(msdi_var_t* msdi_info)
         msdi_info->spi_settings.ui32GPIOPinRX = GPIO_PIN_4;
         msdi_info->spi_settings.ui32GPIOPinTX = GPIO_PIN_5;
         msdi_info->int_flag = 0;
-        MSDI_REG_INI(&msdi_info);
+        MSDI_REG_INI(msdi_info);
        // strcpy(msdi_info->location, "Left Panel"); //TODO Test Fix )
     }
     else if (msdi_info->device == MSDI1)
@@ -263,7 +265,7 @@ void MSDI_Init(msdi_var_t* msdi_info)
         msdi_info->spi_settings.ui32GPIOPinRX = GPIO_PIN_4;
         msdi_info->spi_settings.ui32GPIOPinTX = GPIO_PIN_5;
         msdi_info->int_flag = 0;
-        MSDI_REG_INI(&msdi_info);
+        MSDI_REG_INI(msdi_info);
         //strcpy(msdi_info.location, "Right Panel";
         
     }
@@ -290,12 +292,12 @@ void MSDI_GET_BUTTON_STATUS(msdi_var_t* msdi_info)
 
     if((recv_data & MSDI_POR_STAT_MASK) == MSDI_POR_STAT_MASK)
     {
-        MSDI_REG_INI(&msdi_info);
+        MSDI_REG_INI(msdi_info);
     }
 
-    msdi_info.button_data = ((recv_data & IN_STAT_MASK)>>1);
+    msdi_info->button_data = ((recv_data & IN_STAT_MASK)>>1);
 
-    return
+    return;
 
 
 
@@ -305,13 +307,15 @@ void MSDI_GET_BUTTON_STATUS(msdi_var_t* msdi_info)
 
 /*Function Name: TEST_FUNC
 **Description: Test function to see if files can build, and if data can be returned
-*/
+
 uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[])
 {
     uint32_t rslt = MSDI_READ(ui32Register, pui32DataRx);
 
     return rslt;
 }
+
+*/
 
 
 
