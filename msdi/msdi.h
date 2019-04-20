@@ -259,7 +259,7 @@ void SSI_Init(msdi_spi_t* const spiConfig);
 **            
 **Returns: Void
 */
-void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info);
+void MSDI_Init(msdi_var_t* msdi_info);
 
 /*Function Name: MSDI_READ
 **Description: Test function
