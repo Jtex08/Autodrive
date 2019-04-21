@@ -57,8 +57,11 @@ int main(void)
  // char info[11] = "Left Panel";
  // left_msg.panel_location.data = info;
 
+
+  //Create MSDI struct var
   msdi_var_t pan_one;
 
+  //Initalize which device is being used 
   pan_one.device = MSDI0;
 
 
@@ -112,8 +115,9 @@ int main(void)
 
     while(1)
     {
-    
-      MSDI_GET_BUTTON_STATUS(&pan_one);
+     uint8_t i;
+
+     MSDI_GET_BUTTON_STATUS(&pan_one);
 
      raw_msg.data = pan_one.button_data;
      pub_raw.publish(&raw_msg);
@@ -122,6 +126,26 @@ int main(void)
      
      // Delay for a bit.
      nh.getHardware()->delay(500);
+
+
+    left_msg.btn1.data = ((pan_one.button_data & 0x00000001)==(0x00000001));
+	  left_msg.btn2.data = ((pan_one.button_data & 0x00000002)==(0x00000002));
+	  left_msg.btn3.data = ((pan_one.button_data & 0x00000004)==(0x00000004));
+	  left_msg.btn4.data = ((pan_one.button_data & 0x00000008)==(0x00000008));
+    left_msg.btn5.data = ((pan_one.button_data & 0x00000010)==(0x00000010));
+    left_msg.btn6.data = ((pan_one.button_data & 0x00080000)==(0x00080000));
+    left_msg.btn7.data = ((pan_one.button_data & 0x00100000)==(0x00100000));
+    left_msg.btn8.data = ((pan_one.button_data & 0x00200000)==(0x00200000));
+    left_msg.btn9.data = ((pan_one.button_data & 0x00400000)==(0x00400000));
+    left_msg.btn10.data =((pan_one.button_data & 0x00800000)==(0x00800000));
+
+    lpanel.publish(&left_msg);
+
+    nh.spinOnce();
+
+    nh.getHardware()->delay(500);
+
+
 
      
 

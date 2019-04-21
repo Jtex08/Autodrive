@@ -204,7 +204,8 @@ typedef struct
 }msdi_spi_t;
 
 /*!
- * Struct with individual spi device configuration settings
+ * Struct with individual desired device configuration settings
+ * Fill in with register values such as INT_EN, MODE etc
  */
 typedef struct
 {

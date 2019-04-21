@@ -236,6 +236,7 @@ void MSDI_Init(msdi_var_t* msdi_info)
 {
     if (msdi_info->device == MSDI0)
     {
+        //Initalize MSDI settings
         msdi_info->spi_settings.ui32SysCtlSSI = SYSCTL_PERIPH_SSI0;
         msdi_info->spi_settings.ui32SysCtlGPIO = SYSCTL_PERIPH_GPIOA;
         msdi_info->spi_settings.ui32SSIBASE = SSI0_BASE;
@@ -248,7 +249,7 @@ void MSDI_Init(msdi_var_t* msdi_info)
         msdi_info->spi_settings.ui32GPIOPinRX = GPIO_PIN_4;
         msdi_info->spi_settings.ui32GPIOPinTX = GPIO_PIN_5;
         msdi_info->int_flag = 0;
-        MSDI_REG_INI(msdi_info);
+        
        // strcpy(msdi_info->location, "Left Panel"); //TODO Test Fix )
     }
     else if (msdi_info->device == MSDI1)
@@ -265,7 +266,7 @@ void MSDI_Init(msdi_var_t* msdi_info)
         msdi_info->spi_settings.ui32GPIOPinRX = GPIO_PIN_4;
         msdi_info->spi_settings.ui32GPIOPinTX = GPIO_PIN_5;
         msdi_info->int_flag = 0;
-        MSDI_REG_INI(msdi_info);
+        
         //strcpy(msdi_info.location, "Right Panel";
         
     }
@@ -274,7 +275,12 @@ void MSDI_Init(msdi_var_t* msdi_info)
 
     msdi_info->reg_settings.blank_set = 0;
 
+
+    //Set up SPI 
     SSI_Init(&(msdi_info->spi_settings)); //REMEMBER
+
+    //Initalize registers
+    MSDI_REG_INI(msdi_info);
 }
 
 /*Function Name: MSDI_GET_BUTTON_STATUS
