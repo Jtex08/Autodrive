@@ -54,8 +54,8 @@ int main(void)
 //  uint32_t ui32Index;
   uint32_t pui32DataRx[NUM_SSI_DATA];
 
- // char info[11] = "Left Panel";
- // left_msg.panel_location.data = info;
+ char info[11] = "Left Panel";
+ left_msg.panel_location.data = info;
 
 
   //Create MSDI struct var
