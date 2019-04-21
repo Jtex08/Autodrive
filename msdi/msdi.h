@@ -38,8 +38,8 @@ extern "C"
 typedef enum
 {
     MSDI_STATUS_SUCCESS          = 0U,    /*!< No error. */
-    MSDI_STATUS_SPI_INIT         = 1U,    /*!< SPI initialization failure. */
-    MSDI_STATUS_COMM_ERROR       = 2U     /*!< Error in communication. */
+    MSDI_STATUS_SPI_FAIL         = 1U,    /*!< SPI initialization failure. */
+    MSDI_STATUS_POR              = 2U     /*!< Power ON Reset. Reinitialize. */
 } msdi_status_t;
 
 
@@ -60,6 +60,19 @@ typedef enum
     SPI_0                             = 0U,
     SPI_1                             = 1U 
 } msdi_spi_choice_t;
+
+
+/*
+**Device Designation
+*/
+typedef enum
+{
+    MSDI0                             = 0U,
+    MSDI1                             = 1U,
+    MSDI2                             = 2U,
+    MSDI3                             = 3U 
+} msdi_dev_des_t;
+
 
 
 
@@ -115,7 +128,7 @@ typedef enum
 #define THRESMAP_CFG1           0x2F000000  // ADC Threshold Mapping Register
 #define THRESMAP_CFG2           0x30000000  // ADC Threshold Mapping Register
 #define Matrix                  0x31000000  // Matrix Setting Register
-#define Mode                    0x32000000  // Mode Setting Register
+#define MODE                    0x32000000  // Mode Setting Register
 
 //*****************************************************************************
 //
@@ -144,13 +157,18 @@ typedef enum
  *Fault status register
  ******************************************************************************/
 
-#define MSDI_POR_STAT_MASK                    (0x00000080U)/*Power on reset mask*/
-#define MSDI_SPI_FAIL_MASK                    (0x00000040U)/*SPI Comm fail*/
-#define MSDI_PRTY_FAIL_MASK                   (0x00000020U)/*Parity fail mask*/
-#define MSDI_SSC_MASK                         (0x00000010U)/*Switch state change*/
-#define MSDI_RES_MASK                         (0x00000008U)/*Reserved and always at 0*/
-#define MSDI_TEMP_MASK                        (0x00000004U)/*Temperature event mask*/
-#define MSDI_OI_MASK                          (0x00000002U)/*Other interrupt*/
+#define MSDI_POR_STAT_MASK                     0x80000000  /*Power on reset mask*/
+#define MSDI_SPI_FAIL_MASK                     0x40000000  /*SPI Comm fail*/
+#define MSDI_PRTY_FAIL_MASK                    0x20000000  /*Parity fail mask*/
+#define MSDI_SSC_MASK                          0x10000000  /*Switch state change*/
+#define MSDI_RES_MASK                          0x08000000  /*Reserved and always at 0*/
+#define MSDI_TEMP_MASK                         0x04000000  /*Temperature event mask*/
+#define MSDI_OI_MASK                           0x02000000  /*Other interrupt*/
+
+/*******************************************************************************
+ *Button Data Masks
+ ******************************************************************************/
+#define IN_STAT_MASK                           0x01FFFFFF  //Mask for IN_STAT Data
 
 /*******************************************************************************
  *SPI choices definitions
@@ -186,7 +204,8 @@ typedef struct
 }msdi_spi_t;
 
 /*!
- * Struct with individual spi device configuration settings
+ * Struct with individual desired device configuration settings
+ * Fill in with register values such as INT_EN, MODE etc
  */
 typedef struct
 {
@@ -203,10 +222,12 @@ typedef struct
  */
 typedef struct
 {
-    
+    msdi_dev_des_t       device;
+    bool                 int_flag;        //interupt flag from msdi
     msdi_spi_t           spi_settings;    /*SPI setting for specific MSDI */
     msdi_reg_set_t       reg_settings;    /*Register setting for specific MSDI */
    // char                 location;      /*Panel location */ 
+    uint32_t             button_data;      //Raw button data value
 
 
 
@@ -239,7 +260,22 @@ void SSI_Init(msdi_spi_t* const spiConfig);
 **            
 **Returns: Void
 */
-void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info);
+void MSDI_Init(msdi_var_t* msdi_info);
+
+/*Function Name: MSDI_READ
+**Description: Test function
+**Parameters: ui32Register = register name
+**            ui32DataRX = pointer to storing value
+**Returns: Will change according to need
+*/
+//uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[]);
+
+/*Function Name: MSDI_GET_BUTTON_STATUS
+**Description: Get status of Buttons by reading the IN_STAT OR AN_STAT Registers
+**Param: Takes in specific msdi, 
+*/
+
+void MSDI_GET_BUTTON_STATUS(msdi_var_t* msdi_info);
 
 /*Function Name: TEST_FUNC
 **Description: Test function
@@ -249,12 +285,12 @@ void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info);
 */
 uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[]);
 
-/*Function Name: TEST_FUNC_TWO
-**Description: Test function
-**Parameters: ui32Register = register name
-**            ui32DataRX = pointer to storing value
+/*Function Name: MSDI_REG_INI
+**Description: Initialize MSDI Register after power on
+**Parameters: 
+**            msdi_info = pointer device variable
 **Returns: Will change according to need*/
-uint32_t TEST_FUNC_TWO(uint32_t ui32Register,uint32_t pui32DataRx[]);
+void MSDI_REG_INI(msdi_var_t* msdi_info);
 
 
 //*****************************************************************************

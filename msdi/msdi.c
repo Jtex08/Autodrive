@@ -49,7 +49,7 @@ static void MSDI_WRITE(uint32_t ui32Register,uint32_t uiSetting,uint32_t pui32Da
 **          ui32Register: Register name data is to be read from
 **          ui32DataRx: Pointer to data received storage
 */
-static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[]);
+static void MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[]);
 
 /*Function Name: MSDI_PARITY
 **Description: Checks raw data for odd parity
@@ -66,9 +66,9 @@ static msdi_parity_t MSDI_PARITY(uint32_t raw_val);
 
 /*Function Name: MSDI_DATA_TRANSFER
 **Description: This function transfers the upper and lower 32 bits of data while simultaneously reading MISO bits
+**TODO: Switch to passing pointer from msdi_var_t
 */
-static void MSDI_DATA_TRANSFER(
-	uint32_t send_data[], uint32_t  rcv_data[])
+static void MSDI_DATA_TRANSFER(uint32_t send_data[], uint32_t  rcv_data[])
 {
 //msdi_status_t status = MSDI_STATUS_SUCCESS;
 
@@ -123,10 +123,10 @@ static void MSDI_WRITE(uint32_t ui32Register,uint32_t ui32Setting, uint32_t pui3
     
 }
 
-/*Function Name: MSDI_WRITE
-**Description: Prepares data to be sent to write to a register
+/*Function Name: MSDI_READ
+**Description: Reads from a register
 */
-static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[])//changed from void to uin32_t for testing//
+static void MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[])//changed from void to uin32_t for testing//
 {
     uint32_t ui32DataTx[NUM_SSI_DATA];
    // uint32_t pui32DataRx[NUM_SSI_DATA];
@@ -146,7 +146,7 @@ static uint32_t MSDI_READ(uint32_t ui32Register,uint32_t pui32DataRx[])//changed
 
     MSDI_DATA_TRANSFER(ui32DataTx,pui32DataRx);//possible issue with pui32DataRx
 
-    return raw_val;
+    return;
     
 }
 
@@ -170,6 +170,8 @@ static msdi_parity_t MSDI_PARITY(uint32_t raw_val)
     {
         return SET_PARITY_BIT;
     }   
+
+    return LEAVE_PARITY_BIT;
 
 }
 
@@ -230,10 +232,11 @@ void SSI_Init(msdi_spi_t* const spiConfig)
 **            
 **Returns: Void
 */
-void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info)
+void MSDI_Init(msdi_var_t* msdi_info)
 {
-    if (choice == SPI_0)
+    if (msdi_info->device == MSDI0)
     {
+        //Initalize MSDI settings
         msdi_info->spi_settings.ui32SysCtlSSI = SYSCTL_PERIPH_SSI0;
         msdi_info->spi_settings.ui32SysCtlGPIO = SYSCTL_PERIPH_GPIOA;
         msdi_info->spi_settings.ui32SSIBASE = SSI0_BASE;
@@ -245,9 +248,11 @@ void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info)
         msdi_info->spi_settings.ui32GPIOPinCLK = GPIO_PIN_2;
         msdi_info->spi_settings.ui32GPIOPinRX = GPIO_PIN_4;
         msdi_info->spi_settings.ui32GPIOPinTX = GPIO_PIN_5;
-       // strcpy(msdi_info->location, "Left Panel";
+        msdi_info->int_flag = 0;
+        
+       // strcpy(msdi_info->location, "Left Panel"); //TODO Test Fix )
     }
-    else if (choice == SPI_1)
+    else if (msdi_info->device == MSDI1)
     {
         msdi_info->spi_settings.ui32SysCtlSSI = SYSCTL_PERIPH_SSI0;
         msdi_info->spi_settings.ui32SysCtlGPIO = SYSCTL_PERIPH_GPIOA;
@@ -260,6 +265,8 @@ void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info)
         msdi_info->spi_settings.ui32GPIOPinCLK = GPIO_PIN_2;
         msdi_info->spi_settings.ui32GPIOPinRX = GPIO_PIN_4;
         msdi_info->spi_settings.ui32GPIOPinTX = GPIO_PIN_5;
+        msdi_info->int_flag = 0;
+        
         //strcpy(msdi_info.location, "Right Panel";
         
     }
@@ -268,15 +275,45 @@ void MSDI_Init(msdi_spi_choice_t choice, msdi_var_t* msdi_info)
 
     msdi_info->reg_settings.blank_set = 0;
 
-    SSI_Init(&(msdi_info->spi_settings));
+
+    //Set up SPI 
+    SSI_Init(&(msdi_info->spi_settings)); //REMEMBER
+
+    //Initalize registers
+    MSDI_REG_INI(msdi_info);
 }
 
+/*Function Name: MSDI_GET_BUTTON_STATUS
+**Description: Get status of Buttons by reading the IN_STAT OR AN_STAT Registers
+**Param: Takes in specific msdi, 
+*/
 
+void MSDI_GET_BUTTON_STATUS(msdi_var_t* msdi_info)
+{
+    uint32_t ui32DataRx[NUM_SSI_DATA];
+    uint32_t recv_data;
+
+    MSDI_READ(IN_STAT_COMP, ui32DataRx);
+    recv_data = ((ui32DataRx[0]<<16) | ui32DataRx[1]);
+
+    if((recv_data & MSDI_POR_STAT_MASK) == MSDI_POR_STAT_MASK)
+    {
+        MSDI_REG_INI(msdi_info);
+    }
+
+    msdi_info->button_data = ((recv_data & IN_STAT_MASK)>>1);
+
+    return;
+
+
+
+
+}
 
 
 /*Function Name: TEST_FUNC
 **Description: Test function to see if files can build, and if data can be returned
-*/
+
 uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[])
 {
     uint32_t rslt = MSDI_READ(ui32Register, pui32DataRx);
@@ -284,21 +321,46 @@ uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[])
     return rslt;
 }
 
+*/
 
 
-/*Function Name: TEST_FUNC_TWO
+
+/*Function Name: MSDI_REG_INI
 **Description: Test function to see if files can build, and if data can be returned
 */
-uint32_t TEST_FUNC_TWO(uint32_t ui32Register,uint32_t pui32DataRx[])
+void MSDI_REG_INI(msdi_var_t* msdi_info)
 {
-    uint32_t enable = 0x00F0000F;
-    MSDI_WRITE(IN_EN, enable, pui32DataRx);
+    uint32_t pui32DataRx[NUM_SSI_DATA];
+   // uint32_t enable = 0x00F0000F;
+    MSDI_WRITE(IN_EN, 0x00F8001F, pui32DataRx); //Enable IN0-4 and IN19-23
 
-    uint32_t cfig = 0x00000800;
+    //uint32_t cfig = 0x00000800;
 
-    MSDI_WRITE(CONFIG, cfig, pui32DataRx);
+    MSDI_WRITE(CS_SELECT, 0x00000000, pui32DataRx);//Battery connected
+
+    MSDI_WRITE(WC_CFG0, 0x00000049, pui32DataRx);
+
+    MSDI_WRITE(WC_CFG1, 0x00049200, pui32DataRx);
+
+    MSDI_WRITE(MODE, 0x00000000, pui32DataRx);
+
     
-    uint32_t rslt = MSDI_READ(ui32Register, pui32DataRx);
 
-    return rslt;
+   // MSDI_WRITE(THRES_CFG4, 0x00002A800, pui32DataRx); //Set THRES9 to ADC Val 170(0xAA)
+
+    //MSDI_WRITE(CONFIG, 0x000004E4, pui32DataRx);
+    MSDI_WRITE(THRES_COMP, 0x00000F0F, pui32DataRx);
+
+    MSDI_WRITE(CONFIG, 0x00000CE4, pui32DataRx);
+    MSDI_WRITE(INT_EN_CFG1,0x00000155, pui32DataRx);
+    MSDI_WRITE(INT_EN_CFG0, 0x00554000, pui32DataRx);
+
+
+    
+
+
+    //Read INT_Stat To clear 
+    MSDI_READ(INT_STAT, pui32DataRx);
+
+    return;
 }
