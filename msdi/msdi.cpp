@@ -20,19 +20,23 @@ extern "C"
 #include <ros.h>
 #include <std_msgs/UInt32.h>
 #include "rosserial_tivac_tutorials/Panel.h"
+#include "rosserial_tivac_tutorials/Current.h"
 
 // ROS nodehandle
 ros::NodeHandle nh;
 
 std_msgs::UInt32 raw_msg;
 rosserial_tivac_tutorials::Panel  left_msg;
+rosserial_tivac_tutorials::Current  amp_msg;
 ros::Publisher pub_raw("raw_data", &raw_msg);
 ros::Publisher lpanel("panel", &left_msg);
+ros::Publisher amp("Current", &amp_msg);
 
 int main(void)
 {
-  
-
+  //Create local variables
+  uint32_t adc_val[3];
+  uint32_t results[3];
 
   // ROS nodehandle initialization and topic registration
   nh.initNode();
@@ -49,6 +53,8 @@ int main(void)
 */
   nh.advertise(pub_raw);
   nh.advertise(lpanel);
+  nh.advertise(amp);
+
 
 //  uint32_t ui32DataTx[NUM_SSI_DATA];
 //  uint32_t ui32Index;
@@ -56,6 +62,9 @@ int main(void)
 
  char info[11] = "Left Panel";
  left_msg.panel_location.data = info;
+
+ char sens[15] = "Current Sensor";
+ amp_msg.sensor.data = sens;
 
 
   //Create MSDI struct var
@@ -81,6 +90,10 @@ int main(void)
   //SSI_Init(&spiConfig);
 
   MSDI_Init(&pan_one);
+  
+  //ADC initiate for current sensors
+  init_current;
+
 
  // left_msg.panel_location.data = pan_one->location;
 /*
@@ -115,6 +128,10 @@ int main(void)
 
     while(1)
     {
+
+     current_sample(adc_val);
+
+
      uint8_t i;
 
      MSDI_GET_BUTTON_STATUS(&pan_one);
