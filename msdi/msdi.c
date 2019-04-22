@@ -291,6 +291,7 @@ uint32_t TEST_FUNC(uint32_t ui32Register,uint32_t pui32DataRx[])
 */
 uint32_t TEST_FUNC_TWO(uint32_t pui32DataRx[])
 {
+    uint32_t pui32DataRx[NUM_SSI_DATA];
    // uint32_t enable = 0x00F0000F;
     MSDI_WRITE(IN_EN, 0x00F8001F, pui32DataRx); //Enable IN0-4 and IN19-23
 
@@ -298,9 +299,13 @@ uint32_t TEST_FUNC_TWO(uint32_t pui32DataRx[])
 
     MSDI_WRITE(CS_SELECT, 0x00000000, pui32DataRx);//Battery connected
 
-    MSDI_WRITE(WC_CFG0, 0x00000049, pui32DataRx);
+    //MSDI_WRITE(WC_CFG0, 0x00000049, pui32DataRx); //Wetting Current 1mA
 
-    MSDI_WRITE(WC_CFG1, 0x00049200, pui32DataRx);
+    //MSDI_WRITE(WC_CFG1, 0x00049200, pui32DataRx); //Wetting Current 1mA
+
+    MSDI_WRITE(WC_CFG0, 0x00000000, pui32DataRx);  //Wetting Current 0mA
+
+    MSDI_WRITE(WC_CFG1, 0x00000000, pui32DataRx); //Wetting Current 0mA
 
     MSDI_WRITE(MODE, 0x00000000, pui32DataRx);
 
@@ -315,11 +320,6 @@ uint32_t TEST_FUNC_TWO(uint32_t pui32DataRx[])
     MSDI_WRITE(INT_EN_CFG1,0x00000155, pui32DataRx);
     MSDI_WRITE(INT_EN_CFG0, 0x00554000, pui32DataRx);
 
-
-    
-
-
-    
     uint32_t rslt = MSDI_READ(INT_STAT, pui32DataRx);
 
     return rslt;
