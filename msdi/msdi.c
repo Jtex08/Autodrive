@@ -338,13 +338,13 @@ void MSDI_REG_INI(msdi_var_t* msdi_info)
 
     MSDI_WRITE(CS_SELECT, 0x00000000, pui32DataRx);//Battery connected
 
-    MSDI_WRITE(WC_CFG0, 0x00000049, pui32DataRx); //Wetting Current 1mA
+    //MSDI_WRITE(WC_CFG0, 0x00000049, pui32DataRx); //Wetting Current 1mA
 
-    MSDI_WRITE(WC_CFG1, 0x00049200, pui32DataRx); //Wetting Current 1mA
+    //MSDI_WRITE(WC_CFG1, 0x00049200, pui32DataRx); //Wetting Current 1mA
 
-    //MSDI_WRITE(WC_CFG0, 0x00000000, pui32DataRx);  //Wetting Current 0mA
+    MSDI_WRITE(WC_CFG0, 0x00000000, pui32DataRx);  //Wetting Current 0mA
 
-    //MSDI_WRITE(WC_CFG1, 0x00000000, pui32DataRx); //Wetting Current 0mA
+    MSDI_WRITE(WC_CFG1, 0x00000000, pui32DataRx); //Wetting Current 0mA
 
     MSDI_WRITE(MODE, 0x00000000, pui32DataRx);
 
