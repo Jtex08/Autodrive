@@ -27,12 +27,12 @@ extern "C"
 ros::NodeHandle nh;
 
 //Create ROS Messages
-std_msgs::UInt32 raw_msg;
+//std_msgs::UInt32 raw_msg;
 rosserial_tivac_tutorials::Panel  left_msg;
 rosserial_tivac_tutorials::Current  amp_msg;
 
 //Setup ROS Publishers
-ros::Publisher pub_raw("raw_data", &raw_msg);
+//ros::Publisher pub_raw("raw_data", &raw_msg);
 ros::Publisher lpanel("panel", &left_msg);
 ros::Publisher amp("Current", &amp_msg);
 
@@ -46,7 +46,7 @@ int main(void)
   nh.initNode();
 
   /* Wait for connection to establish:  Added for testing to ease connection process
-  Untested as of 4202019
+  Untested as of 4202019*/
 
   while (!nh.connected())
   {
@@ -54,8 +54,8 @@ int main(void)
     nh.getHardware()->delay(10);
   }
 
-*/
-  nh.advertise(pub_raw);
+
+ // nh.advertise(pub_raw);
   nh.advertise(lpanel);
   nh.advertise(amp);
 
@@ -94,7 +94,7 @@ int main(void)
   //ADC initiate for current sensors
   init_current();
 
-
+   nh.getHardware()->delay(500);
     while(1)
     {
       //Trigger ADC 
@@ -120,8 +120,8 @@ int main(void)
      MSDI_GET_BUTTON_STATUS(&pan_one);
 
     //Store output  data for debug
-     raw_msg.data = pan_one.button_data;
-     pub_raw.publish(&raw_msg);
+//     raw_msg.data = pan_one.button_data;
+  //   pub_raw.publish(&raw_msg);
 
      nh.spinOnce();
      
@@ -130,9 +130,9 @@ int main(void)
 
 
     left_msg.btn1.data = ((pan_one.button_data & 0x00000001)==(0x00000001));
-	  left_msg.btn2.data = ((pan_one.button_data & 0x00000002)==(0x00000002));
-	  left_msg.btn3.data = ((pan_one.button_data & 0x00000004)==(0x00000004));
-	  left_msg.btn4.data = ((pan_one.button_data & 0x00000008)==(0x00000008));
+    left_msg.btn2.data = ((pan_one.button_data & 0x00000002)==(0x00000002));
+    left_msg.btn3.data = ((pan_one.button_data & 0x00000004)==(0x00000004));
+    left_msg.btn4.data = ((pan_one.button_data & 0x00000008)==(0x00000008));
     left_msg.btn5.data = ((pan_one.button_data & 0x00000010)==(0x00000010));
     left_msg.btn6.data = ((pan_one.button_data & 0x00080000)==(0x00080000));
     left_msg.btn7.data = ((pan_one.button_data & 0x00100000)==(0x00100000));
