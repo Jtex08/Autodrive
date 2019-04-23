@@ -53,7 +53,7 @@ void current_sample(uint32_t adc_val[]);
 **Returns: Void
 */
 
-void sample_process(uint32_t adc_val[], results[]);
+void sample_process(uint32_t adc_val[], float results[]);
 
 //*****************************************************************************
 //

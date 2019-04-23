@@ -100,7 +100,7 @@ void current_sample(uint32_t adc_val[])
 */
 
 
-void sample_process(float adc_val[], float results[])
+void sample_process(uint32_t adc_val[], float results[])
 {
     float Vref = 1650;
     float temp;

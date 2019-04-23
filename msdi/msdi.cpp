@@ -40,7 +40,7 @@ int main(void)
 {
   //Create local variables
   uint32_t adc_val[3];
-  uint32_t results[3];
+  float results[3];
 
   // ROS nodehandle initialization and topic registration
   nh.initNode();
@@ -92,7 +92,7 @@ int main(void)
   MSDI_Init(&pan_one);
   
   //ADC initiate for current sensors
-  init_current;
+  init_current();
 
 
     while(1)
