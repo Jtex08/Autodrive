@@ -104,6 +104,7 @@ void sample_process(float adc_val[], float results[])
 {
     float Vref = 1650;
     float temp;
+    float sensitivity = 18.5; 
     
 
     //Process adc_val[0] for ring sensor

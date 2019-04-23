@@ -25,9 +25,12 @@ extern "C"
 // ROS nodehandle
 ros::NodeHandle nh;
 
+//Create ROS Messages
 std_msgs::UInt32 raw_msg;
 rosserial_tivac_tutorials::Panel  left_msg;
 rosserial_tivac_tutorials::Current  amp_msg;
+
+//Setup ROS Publishers
 ros::Publisher pub_raw("raw_data", &raw_msg);
 ros::Publisher lpanel("panel", &left_msg);
 ros::Publisher amp("Current", &amp_msg);
@@ -75,19 +78,15 @@ int main(void)
 
 
 
-  /*spiConfig = {SYSCTL_PERIPH_SSI0, SYSCTL_PERIPH_GPIOA, SSI0_BASE, GPIO_PA2_SSI0CLK,
-                GPIO_PA4_SSI0RX, GPIO_PA5_SSI0TX, GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_2,
-                GPIO_PIN_4, GPIO_PIN_5}; */
-
   
 
 
-  //Begin SPI setup
+  //Set system clock
 
   SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
                    SYSCTL_XTAL_16MHZ);
 
-  //SSI_Init(&spiConfig);
+  //Initiate SPI and MSDI
 
   MSDI_Init(&pan_one);
   
@@ -95,54 +94,38 @@ int main(void)
   init_current;
 
 
- // left_msg.panel_location.data = pan_one->location;
-/*
-      nh.getHardware()->delay(500);
-    uint32_t TFT = TEST_FUNC_TWO(pui32DataRx);
-
-     raw_msg.data = TFT;
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-
-     raw_msg.data = pui32DataRx[0];
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-
-     
-     raw_msg.data = pui32DataRx[1];
-     pub_raw.publish(&raw_msg);
-
-     nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
-*/
-
     while(1)
     {
-
+      //Trigger ADC 
      current_sample(adc_val);
 
+     //Process Results
+     sample_process(adc_val, results);
 
-     uint8_t i;
 
+    //Place Results in ROS message and send
+     amp_msg.server.data = results[0];
+     amp_msg.panelzero.data = results[1];
+     amp_msg.panelone.data = results[2];
+
+     amp.publish(&amp_msg);
+
+     nh.spinOnce();
+
+
+     nh.getHardware()->delay(50);
+
+    //Read Button Status Register
      MSDI_GET_BUTTON_STATUS(&pan_one);
 
+    //Store output  data for debug
      raw_msg.data = pan_one.button_data;
      pub_raw.publish(&raw_msg);
 
      nh.spinOnce();
      
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
+     // Delay
+     nh.getHardware()->delay(50);
 
 
     left_msg.btn1.data = ((pan_one.button_data & 0x00000001)==(0x00000001));
@@ -160,11 +143,7 @@ int main(void)
 
     nh.spinOnce();
 
-    nh.getHardware()->delay(500);
-
-
-
-     
+    nh.getHardware()->delay(50);   
 
 
      
