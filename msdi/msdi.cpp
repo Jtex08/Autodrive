@@ -14,6 +14,7 @@ extern "C"
  #include <inc/hw_types.h>
  #include <driverlib/debug.h>
  #include "msdi.h"
+ #include "currentsens.h"
 }
 
 // ROS includes
