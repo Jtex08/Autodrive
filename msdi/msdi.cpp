@@ -114,7 +114,7 @@ int main(void)
      nh.spinOnce();
 
 
-     nh.getHardware()->delay(50);
+     nh.getHardware()->delay(100);
 
     //Read Button Status Register
      MSDI_GET_BUTTON_STATUS(&pan_one);
@@ -123,10 +123,10 @@ int main(void)
 //     raw_msg.data = pan_one.button_data;
   //   pub_raw.publish(&raw_msg);
 
-     nh.spinOnce();
+    // nh.spinOnce();
      
      // Delay
-     nh.getHardware()->delay(50);
+     //nh.getHardware()->delay(50);
 
 
     left_msg.btn1.data = ((pan_one.button_data & 0x00000001)==(0x00000001));
@@ -144,7 +144,7 @@ int main(void)
 
     nh.spinOnce();
 
-    nh.getHardware()->delay(50);   
+    nh.getHardware()->delay(100);   
 
 
      
