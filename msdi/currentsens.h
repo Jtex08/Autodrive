@@ -18,7 +18,10 @@
 #include <stdint.h>
 #include <stddef.h>
 
-
+#ifdef __cplusplus
+extern "C"
+{
+#endif
 
 /*
 **API
@@ -51,3 +54,17 @@ void current_sample(uint32_t adc_val[]);
 */
 
 void sample_process(uint32_t adc_val[], results[]);
+
+//*****************************************************************************
+//
+// Mark the end of the C bindings section for C++ compilers.
+//
+//*****************************************************************************
+#ifdef __cplusplus
+}
+#endif
+
+
+
+
+#endif //currentsens.h
