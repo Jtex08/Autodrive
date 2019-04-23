@@ -42,7 +42,7 @@ void init_current()
 	{
 	}
 
-    SysCtlADCSpeedSet(SYSCTL_ADCSPEED_250KSPS); //ADC Sample Rate set to 250 Kilo Samples Per Second
+   // SysCtlADCSpeedSet(SYSCTL_ADCSPEED_250KSPS); //ADC Sample Rate set to 250 Kilo Samples Per Second
 
     ADCHardwareOversampleConfigure(ADC0_BASE, 64); // Hardware averaging. ( 2, 4, 8 , 16, 32, 64 )
     //64 Samples are averaged here i.e, each sample will be a result of 64 averaged samples. Therefore, every result is a result of 64 x 4 = 256 samples.
