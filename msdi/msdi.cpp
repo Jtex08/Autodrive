@@ -13,58 +13,50 @@ extern "C"
  #include "driverlib/sysctl.h"
  #include <inc/hw_types.h>
  #include <driverlib/debug.h>
- #include "msdi.h"
+ #include "inc/hw_gpio.h"
+ #include "driverlib/sysctl.h"
+ #include "driverlib/rom.h"
+ #include "driverlib/rom_map.h"
+ #include "driverlib/gpio.h"
+ #include "buttonalt.h"
+ #include "currentsens.h"
 }
 
 // ROS includes
 #include <ros.h>
 #include <std_msgs/UInt32.h>
 #include "rosserial_tivac_tutorials/Panel.h"
+#include "rosserial_tivac_tutorials/Current.h"
 
 // ROS nodehandle
 ros::NodeHandle nh;
 
-std_msgs::UInt32 raw_msg;
+//Create ROS Messages
+//std_msgs::UInt32 raw_msg;
 rosserial_tivac_tutorials::Panel  left_msg;
-ros::Publisher pub_raw("raw_data", &raw_msg);
+rosserial_tivac_tutorials::Current  amp_msg;
+
+//Setup ROS Publishers
+//ros::Publisher pub_raw("raw_data", &raw_msg);
 ros::Publisher lpanel("panel", &left_msg);
+ros::Publisher amp("Current", &amp_msg);
 
 int main(void)
 {
-  
+  //Create local variables
+  uint32_t adc_val[3];
+  float results[3];
 
+  uint32_t button_state_left;
+  uint32_t button_state_right;
 
   // ROS nodehandle initialization and topic registration
   nh.initNode();
-  nh.advertise(pub_raw);
-  nh.advertise(lpanel);
 
-  uint32_t ui32DataTx[NUM_SSI_DATA];
-  uint32_t ui32Index;
-  uint32_t pui32DataRx[NUM_SSI_DATA];
-
-  char info[11] = "Left Panel";
-  left_msg.panel_location.data = info;
+  /* Wait for connection to establish:  */
 
 
-  //Begin SPI setup
-
-   SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
-                   SYSCTL_XTAL_16MHZ);
-    
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_SSI0);
-
-    SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
-
-    while(!SysCtlPeripheralReady(SYSCTL_PERIPH_GPIOA))
-    {
-    }
-
-    GPIOPinConfigure(GPIO_PA2_SSI0CLK);
-    //GPIOPinConfigure(GPIO_PA3_SSI0FSS);
-    GPIOPinConfigure(GPIO_PA4_SSI0RX);
-    GPIOPinConfigure(GPIO_PA5_SSI0TX);
-
+<<<<<<< HEAD
     //If SSI0FSS fails to work switch to direct control
     GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE,GPIO_PIN_3);
 
@@ -104,129 +96,109 @@ int main(void)
 
     while(1)
     {
+=======
+>>>>>>> ea4e94499abbea558890124a720cb603ab41140b
 
-    reg_val = DEVICE_ID<<1;
+ // nh.advertise(pub_raw);
+  nh.advertise(lpanel);
+  nh.advertise(amp);
 
-    raw_msg.data = reg_val;
-    pub_raw.publish(&raw_msg);
-
+  while (!nh.connected())
+  {
     nh.spinOnce();
-     
-     // Delay for a bit.
-    nh.getHardware()->delay(500);
+    nh.getHardware()->delay(10);
+  }
 
-    
-    //Need parity function
-    ui32DataTx[0] = reg_val>>16;
+//  uint32_t ui32DataTx[NUM_SSI_DATA];
+//  uint32_t ui32Index;
+  uint32_t pui32DataRx[NUM_SSI_DATA];
 
-    raw_msg.data = ui32DataTx[0];
-    pub_raw.publish(&raw_msg);
+ char info[11] = "Left Panel";
+ left_msg.panel_location.data = info;
 
-    nh.spinOnce();
-     
-     // Delay for a bit.
-    nh.getHardware()->delay(500);
-
-     
-    ui32DataTx[1] = reg_val & 0x0000FFFF;
-
-    raw_msg.data = ui32DataTx[1];
-    pub_raw.publish(&raw_msg);
-
-    nh.spinOnce();
-     
-     // Delay for a bit.
-    nh.getHardware()->delay(500);
-
-         //Put cs low
-    GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_3, 0);
+ char sens[15] = "Current Sensor";
+ amp_msg.sensor.data = sens;
 
 
-    //Send data
+  //Create MSDI struct var
+  //msdi_var_t pan_one;
 
-    // for(ui32Index = 0; ui32Index < NUM_SSI_DATA; ui32Index++)
-    //{
+  //Initalize which device is being used 
+  //pan_one.device = MSDI0;
 
 
 
-    //  SSIDataPut(SSI0_BASE, ui32DataTx[ui32Index]);
-    SSIDataPut(SSI0_BASE, ui32DataTx[0]);
-    SSIDataGet(SSI0_BASE, &pui32DataRx[0]);
-      while(SSIBusy(SSI0_BASE))
-      {
-      }
-
-      //}
-     SSIDataPut(SSI0_BASE, ui32DataTx[1]);
-     SSIDataGet(SSI0_BASE,&pui32DataRx[1]);
-      while(SSIBusy(SSI0_BASE))
-      {
-      }
-
-      //}
-
-        //cs high
-   GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_3);
-
-   //  GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_3, 0);
+  
 
 
-   //for(ui32Index = 0; ui32Index < NUM_SSI_DATA; ui32Index++)
-   //{
-     
+  //Set system clock
+
+  SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
+                   SYSCTL_XTAL_16MHZ);
+
+  //Initiate SPI and MSDI
+
+ // MSDI_Init(&pan_one);
+  ButtonsInit();
+  
+  //ADC initiate for current sensors
+  init_current();
+
+   nh.getHardware()->delay(500);
+    while(1)
+    {
+      //Trigger ADC 
+     current_sample(adc_val);
+
+     //Process Results
+     sample_process(adc_val, results);
 
 
-   //  SSIDataGet(SSI0_BASE, &pui32DataRx[0]);
-	 // SSIDataPut(SSI0_BASE, 0x0000); //Dummy
+    //Place Results in ROS message and send
+     amp_msg.server.data = results[0];
+     amp_msg.panelzero.data = results[1];
+     amp_msg.panelone.data = results[2];
 
-	 // while(SSIBusy(SSI0_BASE))
-	 //     {
-         //}
-
-	 
-   //    SSIDataGet(SSI0_BASE,&pui32DataRx[1]);
-   //   SSIDataPut(SSI0_BASE, 0x0000); //Dummy
-
-   //   while(SSIBusy(SSI0_BASE))
-   //     {
-   //}
-
-
-
-
-
-
-         //
-         // Since we are using 8-bit data, mask off the MSB.
-         //
-         //pui32DataRx[ui32Index] &= 0x00FF;
-
-
-     
-
-   // GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_3, GPIO_PIN_3);
-
-     // rec_val = ((pui32DataRx[0]<<16) | pui32DataRx[1]);
-
-     //  while(1)
-     // {
-
-     raw_msg.data = pui32DataRx[0];
-     pub_raw.publish(&raw_msg);
+     amp.publish(&amp_msg);
 
      nh.spinOnce();
-     
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
 
-     
-     raw_msg.data = pui32DataRx[1];
-     pub_raw.publish(&raw_msg);
 
-     nh.spinOnce();
+     nh.getHardware()->delay(100);
+
+
+
+    //Read Button Status Register
+
+    ButtonsPoll(&button_state_left, &button_state_right);
+     //MSDI_GET_BUTTON_STATUS(&pan_one);
+
+    //Store output  data for debug
+//     raw_msg.data = pan_one.button_data;
+  //   pub_raw.publish(&raw_msg);
+
+    // nh.spinOnce();
      
-     // Delay for a bit.
-     nh.getHardware()->delay(500);
+     // Delay
+     //nh.getHardware()->delay(50);
+
+
+    left_msg.btn1.data = button_state_left & BTN_ONE;
+    left_msg.btn2.data = button_state_left & BTN_TWO;
+    left_msg.btn3.data = button_state_left & BTN_THREE;
+    left_msg.btn4.data = button_state_left & BTN_FOUR;
+    left_msg.btn5.data = button_state_left & BTN_FIVE;
+    left_msg.btn6.data = button_state_right & BTN_SIX;
+    left_msg.btn7.data = button_state_right & BTN_SEVEN;
+    left_msg.btn8.data = button_state_right & BTN_EIGHT;
+    left_msg.btn9.data = button_state_right & BTN_NINE;
+    left_msg.btn10.data = button_state_right & BTN_TEN;
+
+    lpanel.publish(&left_msg);
+
+    nh.spinOnce();
+
+    nh.getHardware()->delay(100);   
 
 
      
