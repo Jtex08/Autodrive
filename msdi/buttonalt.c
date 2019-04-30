@@ -25,7 +25,7 @@
 // pressed when the application starts, this will be detected).
 //
 //*****************************************************************************
-static uint8_t g_ui8ButtonStates = ALL_BUTTONS;
+//static uint8_t g_ui8ButtonStates = ALL_BUTTONS;
 
 //*****************************************************************************
 //
@@ -56,21 +56,28 @@ static uint8_t g_ui8ButtonStates = ALL_BUTTONS;
 //! indicates that it is released.
 //
 //*****************************************************************************
-uint8_t
-ButtonsPoll(uint8_t *pui8Delta, uint8_t *pui8RawState)
+void
+ButtonsPoll(uint32_t *pui32Data_Left, uint32_t *pui32Data_Right)
 {
-    uint32_t ui32Delta;
-    uint32_t ui32Data;
-    static uint8_t ui8SwitchClockA = 0;
-    static uint8_t ui8SwitchClockB = 0;
+    //uint32_t ui32Delta;
+    //uint32_t ui32Data_Left;
+    //uint32_t ui32Data_Right;
+    //static uint8_t ui8SwitchClockA = 0;
+    //static uint8_t ui8SwitchClockB = 0;
 
     //
     // Read the raw state of the push buttons.  Save the raw state
     // (inverting the bit sense) if the caller supplied storage for the
     // raw value.
     //
-    ui32Data = (ROM_GPIOPinRead(BUTTONS_GPIO_BASE, ALL_BUTTONS));
-    if(pui8RawState)
+
+
+    *pui32Data_Left = ((ROM_GPIOPinRead(GPIO_PORTB_BASE, LEFT_BUTTON_B)) | (ROM_GPIOPinRead(GPIO_PORTA_BASE, LEFT_BUTTON_A))) ;
+
+    *pui32Data_Right = ((ROM_GPIOPinRead(GPIO_PORTB_BASE, RIGHT_BUTTON_B)) | (ROM_GPIOPinRead(GPIO_PORTA_BASE, RIGHT_BUTTON_A))) ;
+
+
+   /* if(pui8RawState)
     {
         *pui8RawState = (uint8_t)~ui32Data;
     }
@@ -117,8 +124,8 @@ ButtonsPoll(uint8_t *pui8Delta, uint8_t *pui8RawState)
     // Return the debounced buttons states to the caller.  Invert the bit
     // sense so that a '1' indicates the button is pressed, which is a
     // sensible way to interpret the return value.
-    //
-    return(~g_ui8ButtonStates);
+    */
+    return;
 }
 
 //*****************************************************************************
@@ -128,7 +135,7 @@ ButtonsPoll(uint8_t *pui8Delta, uint8_t *pui8RawState)
 //! This function must be called during application initialization to
 //! configure the GPIO pins to which the pushbuttons are attached.  It enables
 //! the port used by the buttons and configures each button GPIO as an input
-//! with a weak pull-up.
+//! with a weak pull-down.
 //!
 //! \return None.
 //
@@ -139,29 +146,40 @@ ButtonsInit(void)
     //
     // Enable the GPIO port to which the pushbuttons are connected.
     //
-    ROM_SysCtlPeripheralEnable(BUTTONS_GPIO_PERIPH);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
+
+
 
     //
     // Unlock PF0 so we can change it to a GPIO input
     // Once we have enabled (unlocked) the commit register then re-lock it
     // to prevent further changes.  PF0 is muxed with NMI thus a special case.
     //
-    HWREG(BUTTONS_GPIO_BASE + GPIO_O_LOCK) = GPIO_LOCK_KEY;
+    /*HWREG(BUTTONS_GPIO_BASE + GPIO_O_LOCK) = GPIO_LOCK_KEY;
     HWREG(BUTTONS_GPIO_BASE + GPIO_O_CR) |= 0x01;
-    HWREG(BUTTONS_GPIO_BASE + GPIO_O_LOCK) = 0;
+    HWREG(BUTTONS_GPIO_BASE + GPIO_O_LOCK) = 0;*/
 
     //
     // Set each of the button GPIO pins as an input with a pull-up.
     //
-    ROM_GPIODirModeSet(BUTTONS_GPIO_BASE, ALL_BUTTONS, GPIO_DIR_MODE_IN);
-    MAP_GPIOPadConfigSet(BUTTONS_GPIO_BASE, ALL_BUTTONS,
-                         GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
+    ROM_GPIODirModeSet(GPIO_PORTA_BASE, LEFT_BUTTON_A | RIGHT_BUTTON_A, GPIO_DIR_MODE_IN);
+    MAP_GPIOPadConfigSet(GPIO_PORTA_BASE, LEFT_BUTTON_A | RIGHT_BUTTON_A,
+                         GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPD);
+
+    ROM_GPIODirModeSet(GPIO_PORTB_BASE, LEFT_BUTTON_B | RIGHT_BUTTON_B, GPIO_DIR_MODE_IN);
+    MAP_GPIOPadConfigSet(GPIO_PORTA_BASE, LEFT_BUTTON_B | RIGHT_BUTTON_B,
+                         GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPD);
+
 
     //
     // Initialize the debounced button state with the current state read from
     // the GPIO bank.
     //
-    g_ui8ButtonStates = ROM_GPIOPinRead(BUTTONS_GPIO_BASE, ALL_BUTTONS);
+  //  g_ui8ButtonStates = ROM_GPIOPinRead(BUTTONS_GPIO_BASE, ALL_BUTTONS);
+
+  return;
 }
 
 //*****************************************************************************

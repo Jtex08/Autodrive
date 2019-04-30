@@ -13,7 +13,12 @@ extern "C"
  #include "driverlib/sysctl.h"
  #include <inc/hw_types.h>
  #include <driverlib/debug.h>
- #include "msdi.h"
+ #include "inc/hw_gpio.h"
+ #include "driverlib/sysctl.h"
+ #include "driverlib/rom.h"
+ #include "driverlib/rom_map.h"
+ #include "driverlib/gpio.h"
+ #include "buttonalt.h"
  #include "currentsens.h"
 }
 
@@ -41,6 +46,9 @@ int main(void)
   //Create local variables
   uint32_t adc_val[3];
   float results[3];
+
+  uint32_t button_state_left;
+  uint32_t button_state_right;
 
   // ROS nodehandle initialization and topic registration
   nh.initNode();
@@ -89,6 +97,7 @@ int main(void)
   //Initiate SPI and MSDI
 
  // MSDI_Init(&pan_one);
+  ButtonsInit();
   
   //ADC initiate for current sensors
   init_current();
@@ -115,8 +124,12 @@ int main(void)
 
      nh.getHardware()->delay(100);
 
+
+
     //Read Button Status Register
-     MSDI_GET_BUTTON_STATUS(&pan_one);
+
+    ButtonsPoll(&button_state_left, &button_state_right);
+     //MSDI_GET_BUTTON_STATUS(&pan_one);
 
     //Store output  data for debug
 //     raw_msg.data = pan_one.button_data;
@@ -128,16 +141,16 @@ int main(void)
      //nh.getHardware()->delay(50);
 
 
-    left_msg.btn1.data = ((pan_one.button_data & 0x00000001)==(0x00000001));
-    left_msg.btn2.data = ((pan_one.button_data & 0x00000002)==(0x00000002));
-    left_msg.btn3.data = ((pan_one.button_data & 0x00000004)==(0x00000004));
-    left_msg.btn4.data = ((pan_one.button_data & 0x00000008)==(0x00000008));
-    left_msg.btn5.data = ((pan_one.button_data & 0x00000010)==(0x00000010));
-    left_msg.btn6.data = ((pan_one.button_data & 0x00080000)==(0x00080000));
-    left_msg.btn7.data = ((pan_one.button_data & 0x00100000)==(0x00100000));
-    left_msg.btn8.data = ((pan_one.button_data & 0x00200000)==(0x00200000));
-    left_msg.btn9.data = ((pan_one.button_data & 0x00400000)==(0x00400000));
-    left_msg.btn10.data =((pan_one.button_data & 0x00800000)==(0x00800000));
+    left_msg.btn1.data = button_state_left & BTN_ONE;
+    left_msg.btn2.data = button_state_left & BTN_TWO;
+    left_msg.btn3.data = button_state_left & BTN_THREE;
+    left_msg.btn4.data = button_state_left & BTN_FOUR;
+    left_msg.btn5.data = button_state_left & BTN_FIVE;
+    left_msg.btn6.data = button_state_left & BTN_SIX;
+    left_msg.btn7.data = button_state_left & BTN_SEVEN;
+    left_msg.btn8.data = button_state_left & BTN_EIGHT;
+    left_msg.btn9.data = button_state_left & BTN_NINE;
+    left_msg.btn10.data = button_state_left & BTN_TEN;
 
     lpanel.publish(&left_msg);
 

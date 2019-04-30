@@ -28,7 +28,7 @@ extern "C"
 // Switch to BAT, Resistor divider w/ 3V3 to GPIO pins. Pull down resistor
 //
 //*****************************************************************************
-#define BUTTONS_GPIO_PERIPH     SYSCTL_PERIPH_GPIOF
+//#define BUTTONS_GPIO_PERIPH     SYSCTL_PERIPH_GPIOF
 #define BUTTONS_GPIO_BASE       GPIO_PORTF_BASE
 
 #define NUM_BUTTONS             10
@@ -44,6 +44,12 @@ extern "C"
 #define BTN_TEN                 GPIO_PIN_2
 
 #define RIGHT_BUTTON            GPIO_PIN_0
+
+#define LEFT_BUTTON_B           (BTN_ONE | BTN_TWO)
+#define LEFT_BUTTON_A           (BTN_THREE | BTN_FOUR | BTN_FIVE)
+#define RIGHT_BUTTON_B          (BTN_SIX | BTN_SEVEN)
+#define RIGHT_BUTTON_A          (BTN_EIGHT | BTN_NINE | BTN_TEN)
+
 
 #define ALL_BUTTONS             (LEFT_BUTTON | RIGHT_BUTTON)
 
@@ -61,12 +67,12 @@ extern "C"
 
 //*****************************************************************************
 //
-// Functions exported from buttons.c
+// Functions exported from buttonalt.c
 //
 //*****************************************************************************
 extern void ButtonsInit(void);
-extern uint8_t ButtonsPoll(uint8_t *pui8Delta,
-                             uint8_t *pui8Raw);
+extern void ButtonsPoll(uint32_t *pui32Data_Left,
+                             uint32_t *pui32Data_Right);
 
 //*****************************************************************************
 //
