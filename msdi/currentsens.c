@@ -102,7 +102,7 @@ void current_sample(uint32_t adc_val[])
 
 void sample_process(uint32_t adc_val[], float results[])
 {
-    float Vref = 1.650;
+    float Vref = 1.6;
     float temp;
     float ring_sensitivity = .010;
     float sensitivity =(.0185); 
