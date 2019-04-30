@@ -119,13 +119,13 @@ void sample_process(uint32_t adc_val[], float results[])
 
     //12 bit onboard adc-> 3.3V/4096 ~=.806 mV
 
-    temp = .80566 * adc_val[1];
+    temp = .00080566 * adc_val[1];
 
    
 
     results[1] = ((temp - Vref) / sensitivity);
 
-    temp = .80566 * adc_val[2];
+    temp = .00080566 * adc_val[2];
 
     results[2] = ((temp - Vref) / sensitivity);
 
