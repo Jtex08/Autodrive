@@ -19,17 +19,16 @@ extern "C"
 //
 // The switches are on the following ports/pins:
 //
-//  PB0         PB7
-//  PB1         PB6
-//  PA5         PA4
-//  PA6         PA3
-//  PA7         PA2
+//  PB0  BTN1       PB7 BTN6
+//  PB1  BTN2       PB6 BTN7
+//  PA5  BTN3       PA4 BTN8
+//  PA6  BTN4       PA3 BTN9
+//  PA7  BTN5       PA2 BTN10
 //
 // Switch to BAT, Resistor divider w/ 3V3 to GPIO pins. Pull down resistor
 //
 //*****************************************************************************
-//#define BUTTONS_GPIO_PERIPH     SYSCTL_PERIPH_GPIOF
-#define BUTTONS_GPIO_BASE       GPIO_PORTF_BASE
+
 
 #define NUM_BUTTONS             10
 #define BTN_ONE                 GPIO_PIN_0
