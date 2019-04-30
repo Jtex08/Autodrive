@@ -109,7 +109,7 @@ void sample_process(uint32_t adc_val[], float results[])
     
 
     //Process adc_val[0] for ring sensor
-    temp = (3.3/4096) * adc_val[0];
+    temp = .0080566 * adc_val[0];
 
     results[0] = ((temp - Vref) / ring_sensitivity);
 
