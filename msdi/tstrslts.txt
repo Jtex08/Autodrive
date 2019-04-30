@@ -1,0 +1,11 @@
+Test One:
+All set to current source, 1mA    
+Results:
+Buttons 5,6,7 always on 
+Rest of Buttons working as intended
+
+Test Two:
+All set to current source, 0 mA
+Results:
+Button 5 Always on, Button 6 and 7 always off
+Rest working as intended

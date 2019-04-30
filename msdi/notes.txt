@@ -1,0 +1,5 @@
+Switching to resistor divider
+Expecting 3.3V in 
+Use pull down resistor
+Reads 1 when connected to Vss
+Pulled to 0 when not connected

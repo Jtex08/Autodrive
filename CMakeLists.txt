@@ -11,6 +11,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES Panel.msg
   FILES Buttons.msg
+  FILES Current.msg
 )
 add_service_files(
   FILES ColorRGBA.srv
