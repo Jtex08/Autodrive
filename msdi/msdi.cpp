@@ -45,20 +45,19 @@ int main(void)
   // ROS nodehandle initialization and topic registration
   nh.initNode();
 
-  /* Wait for connection to establish:  Added for testing to ease connection process
-  Untested as of 4202019*/
+  /* Wait for connection to establish:  */
 
-  while (!nh.connected())
-  {
-    nh.spinOnce();
-    nh.getHardware()->delay(10);
-  }
 
 
  // nh.advertise(pub_raw);
   nh.advertise(lpanel);
   nh.advertise(amp);
 
+  while (!nh.connected())
+  {
+    nh.spinOnce();
+    nh.getHardware()->delay(10);
+  }
 
 //  uint32_t ui32DataTx[NUM_SSI_DATA];
 //  uint32_t ui32Index;
@@ -72,10 +71,10 @@ int main(void)
 
 
   //Create MSDI struct var
-  msdi_var_t pan_one;
+  //msdi_var_t pan_one;
 
   //Initalize which device is being used 
-  pan_one.device = MSDI0;
+  //pan_one.device = MSDI0;
 
 
 
@@ -89,7 +88,7 @@ int main(void)
 
   //Initiate SPI and MSDI
 
-  MSDI_Init(&pan_one);
+ // MSDI_Init(&pan_one);
   
   //ADC initiate for current sensors
   init_current();
