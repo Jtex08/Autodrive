@@ -19,7 +19,7 @@ extern "C"
 //
 // The switches are on the following ports/pins:
 
-//
+//  Left Side       Right Side
 //  PB0  BTN1       PB7 BTN6
 //  PB1  BTN2       PB6 BTN7
 //  PA5  BTN3       PA4 BTN8
