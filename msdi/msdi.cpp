@@ -146,11 +146,11 @@ int main(void)
     left_msg.btn3.data = button_state_left & BTN_THREE;
     left_msg.btn4.data = button_state_left & BTN_FOUR;
     left_msg.btn5.data = button_state_left & BTN_FIVE;
-    left_msg.btn6.data = button_state_left & BTN_SIX;
-    left_msg.btn7.data = button_state_left & BTN_SEVEN;
-    left_msg.btn8.data = button_state_left & BTN_EIGHT;
-    left_msg.btn9.data = button_state_left & BTN_NINE;
-    left_msg.btn10.data = button_state_left & BTN_TEN;
+    left_msg.btn6.data = button_state_right & BTN_SIX;
+    left_msg.btn7.data = button_state_right & BTN_SEVEN;
+    left_msg.btn8.data = button_state_right & BTN_EIGHT;
+    left_msg.btn9.data = button_state_right & BTN_NINE;
+    left_msg.btn10.data = button_state_right & BTN_TEN;
 
     lpanel.publish(&left_msg);
 
