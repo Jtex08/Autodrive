@@ -111,7 +111,7 @@ void sample_process(uint32_t adc_val[], float results[])
     //Process adc_val[0] for ring sensor
     temp = (3.3/4096) * adc_val[0];
 
-    results[0] = (temp - Vref) / ring_sensitivity;
+    results[0] = ((temp - Vref) / ring_sensitivity);
 
 
     //Process rest for board sensors
@@ -121,13 +121,13 @@ void sample_process(uint32_t adc_val[], float results[])
 
     temp = .80566 * adc_val[1];
 
-    results[0] = (temp - Vref) * 
+   
 
-    results[1] = (temp - Vref) / sensitivity;
+    results[1] = ((temp - Vref) / sensitivity);
 
     temp = .80566 * adc_val[2];
 
-    results[2] = (temp - Vref) / sensitivity;
+    results[2] = ((temp - Vref) / sensitivity);
 
 
 }
