@@ -127,15 +127,9 @@ int main(void)
     //Read Button Status Register
      MSDI_GET_BUTTON_STATUS(&pan_one);
 
-    //Store output  data for debug
-//     raw_msg.data = pan_one.button_data;
-  //   pub_raw.publish(&raw_msg);
+    
 
-    // nh.spinOnce();
-     
-     // Delay
-     //nh.getHardware()->delay(50);
-
+    //Place Results in ROS message and send
 
     left_msg.btn1.data = ((pan_one.button_data & 0x00000001)==(0x00000001));
     left_msg.btn2.data = ((pan_one.button_data & 0x00000002)==(0x00000002));
@@ -147,6 +141,8 @@ int main(void)
     left_msg.btn8.data = ((pan_one.button_data & 0x00200000)==(0x00200000));
     left_msg.btn9.data = ((pan_one.button_data & 0x00400000)==(0x00400000));
     left_msg.btn10.data =((pan_one.button_data & 0x00800000)==(0x00800000));
+
+
 
     lpanel.publish(&left_msg);
 
