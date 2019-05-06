@@ -61,7 +61,6 @@ int main(void)
   // ROS nodehandle initialization and topic registration
   nh.initNode();
 
-  /* Wait for connection to establish:  */
 
 
 
