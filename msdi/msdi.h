@@ -4,7 +4,7 @@
 **Author: Jonathan Noland
 **File: msdi.h
 **------------------------------------------------------------------------------
-**This file contains the definitions and includes neccessary to use the TIC-10024-Q1 
+**This file contains the definitions and includes neccessary to use the TIC-12400
 */
 
 #ifndef __MSDI_H__
