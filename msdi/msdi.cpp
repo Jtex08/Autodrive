@@ -1,3 +1,12 @@
+/*Texas A&M University
+**Electronic Systems Engineering Technology
+**ESET 420 Capstone II
+**Author: Jonathan Noland
+**File: msdi.cpp
+**------------------------------------------------------------------------------
+**This is the primary file for use with the power monitoring system
+*/
+
 //Standard Library Includes
 #include <stdbool.h>
 #include <stdint.h>
@@ -27,7 +36,7 @@ extern "C"
 ros::NodeHandle nh;
 
 //Create ROS Messages
-//std_msgs::UInt32 raw_msg;
+
 rosserial_tivac_tutorials::Panel  left_msg;
 rosserial_tivac_tutorials::Current  amp_msg;
 
@@ -45,8 +54,14 @@ int main(void)
   // ROS nodehandle initialization and topic registration
   nh.initNode();
 
-  /* Wait for connection to establish:  Added for testing to ease connection process
-  Untested as of 4202019*/
+
+
+ // nh.advertise(pub_raw);
+  nh.advertise(lpanel);
+  nh.advertise(amp);
+
+// Wait for connection to establish:  Added for testing to ease connection process
+
 
   while (!nh.connected())
   {
@@ -55,14 +70,7 @@ int main(void)
   }
 
 
- // nh.advertise(pub_raw);
-  nh.advertise(lpanel);
-  nh.advertise(amp);
-
-
-//  uint32_t ui32DataTx[NUM_SSI_DATA];
-//  uint32_t ui32Index;
-  uint32_t pui32DataRx[NUM_SSI_DATA];
+ uint32_t pui32DataRx[NUM_SSI_DATA];
 
  char info[11] = "Left Panel";
  left_msg.panel_location.data = info;
