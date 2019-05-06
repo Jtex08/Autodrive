@@ -1,3 +1,12 @@
+/*Texas A&M University
+**Electronic Systems Engineering Technology
+**ESET 420 Capstone II
+**Author: Jonathan Noland
+**File: buttonalt.
+**------------------------------------------------------------------------------
+**Header file for functions and defines to use gpio to read buttons 
+*/
+
 #ifndef BUTTONALT_H
 #define BUTTONALT_H
 
@@ -52,16 +61,6 @@ extern "C"
 
 #define ALL_BUTTONS             (LEFT_BUTTON | RIGHT_BUTTON)
 
-//*****************************************************************************
-//
-// Useful macros for detecting button events.
-//
-//*****************************************************************************
-#define BUTTON_PRESSED(button, buttons, changed)                              \
-        (((button) & (changed)) && ((button) & (buttons)))
-
-#define BUTTON_RELEASED(button, buttons, changed)                             \
-        (((button) & (changed)) && !((button) & (buttons)))
 
 
 //*****************************************************************************

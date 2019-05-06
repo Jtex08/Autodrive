@@ -4,7 +4,7 @@
 **Author: Jonathan Noland
 **File: msdi.c
 **------------------------------------------------------------------------------
-**This file contains the functions to use the TIC-10024-Q1 
+**This file contains the functions to use the TIC-12400-Q1 
 */
 
 #include <stdbool.h>

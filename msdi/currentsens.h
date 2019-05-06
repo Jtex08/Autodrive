@@ -2,9 +2,9 @@
 **Electronic Systems Engineering Technology
 **ESET 420 Capstone II
 **Author: Jonathan Noland
-**File: adcproj.h
+**File: currentsens.h
 **------------------------------------------------------------------------------
-**This file contains the definitions and includes neccessary to use ADC and current sensprs
+**This file contains the definitions and functions necessary to use ADC and current sensors
 */
 
 #ifndef __CURRENTSENS_H__

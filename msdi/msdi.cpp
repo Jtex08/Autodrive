@@ -1,3 +1,13 @@
+/*Texas A&M University
+**Electronic Systems Engineering Technology
+**ESET 420 Capstone II
+**Author: Jonathan Noland
+**File: msdi.cpp
+**------------------------------------------------------------------------------
+**This is the primary file for use with the power monitoring system
+*/
+
+
 //Standard Library Includes
 #include <stdbool.h>
 #include <stdint.h>
@@ -32,12 +42,10 @@ extern "C"
 ros::NodeHandle nh;
 
 //Create ROS Messages
-//std_msgs::UInt32 raw_msg;
 rosserial_tivac_tutorials::Panel  left_msg;
 rosserial_tivac_tutorials::Current  amp_msg;
 
 //Setup ROS Publishers
-//ros::Publisher pub_raw("raw_data", &raw_msg);
 ros::Publisher lpanel("panel", &left_msg);
 ros::Publisher amp("Current", &amp_msg);
 
@@ -61,16 +69,19 @@ int main(void)
   nh.advertise(lpanel);
   nh.advertise(amp);
 
+
+  /* Wait for connection to establish:  */
   while (!nh.connected())
   {
     nh.spinOnce();
     nh.getHardware()->delay(10);
   }
 
-//  uint32_t ui32DataTx[NUM_SSI_DATA];
-//  uint32_t ui32Index;
+
   uint32_t pui32DataRx[NUM_SSI_DATA];
 
+
+//Fill in message names
  char info[11] = "Left Panel";
  left_msg.panel_location.data = info;
 
@@ -78,11 +89,6 @@ int main(void)
  amp_msg.sensor.data = sens;
 
 
-  //Create MSDI struct var
-  //msdi_var_t pan_one;
-
-  //Initalize which device is being used 
-  //pan_one.device = MSDI0;
 
 
 
@@ -94,9 +100,8 @@ int main(void)
   SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
                    SYSCTL_XTAL_16MHZ);
 
-  //Initiate SPI and MSDI
 
- // MSDI_Init(&pan_one);
+  //Initiate GPIO
   ButtonsInit();
   
   //ADC initiate for current sensors
@@ -129,18 +134,9 @@ int main(void)
     //Read Button Status Register
 
     ButtonsPoll(&button_state_left, &button_state_right);
-     //MSDI_GET_BUTTON_STATUS(&pan_one);
-
-    //Store output  data for debug
-//     raw_msg.data = pan_one.button_data;
-  //   pub_raw.publish(&raw_msg);
-
-    // nh.spinOnce();
-     
-     // Delay
-     //nh.getHardware()->delay(50);
 
 
+    //Place Results in ROS message and send
     left_msg.btn1.data = button_state_left & BTN_ONE;
     left_msg.btn2.data = button_state_left & BTN_TWO;
     left_msg.btn3.data = button_state_left & BTN_THREE;

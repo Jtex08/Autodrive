@@ -2,9 +2,9 @@
 **Electronic Systems Engineering Technology
 **ESET 420 Capstone II
 **Author: Jonathan Noland
-**File: msdi.c
+**File: currentsens.c
 **------------------------------------------------------------------------------
-**This file contains the functions to use the TIC-10024-Q1 
+**This file contains the functions to use current sensors
 */
 
 #include <stdbool.h>
@@ -114,10 +114,8 @@ void sample_process(uint32_t adc_val[], float results[])
     results[0] = ((temp - Vref) / ring_sensitivity);
 
 
-    //Process rest for board sensors
-    //Need Sensitivity 
+    //Process board sensors
 
-    //12 bit onboard adc-> 3.3V/4096 ~=.806 mV
 
     temp = .00080566 * adc_val[1];
 
